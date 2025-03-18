@@ -1,0 +1,36 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+    {
+        "context": "Workspace",
+        "bindings": {
+            "ctrl-n": null,
+            "ctrl-h": null,
+            "ctrl-l": null,
+            "ctrl-b": null
+        }
+    },
+    {
+        "context": "Editor",
+        "bindings": {
+            "ctrl-n": "vim::SelectNext",
+            "ctrl-w": "pane::CloseActiveItem",
+            "ctrl-f": "vim::Search",
+            "ctrl-r": "editor::FindAllReferences",
+            "ctrl-shift-l": "pane::ActivateNextItem",
+            "ctrl-shift-h": "pane::ActivatePrevItem",
+            "ctrl-l": "workspace::ActivateNextPane",
+            "ctrl-h": "pane::ActivatePrevItem",
+            "ctrl-b": "project_panel::Open",
+            // "ctrl-tab": "editor::NextInlineCompletion"
+            "ctrl-right": "editor::SelectLargerSyntaxNode",
+            "ctrl-left": "editor::SelectSmallerSyntaxNode",
+            "ctrl-i": "project_panel::ToggleFocus"
+        }
+    }
+]
