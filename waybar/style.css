@@ -1,0 +1,226 @@
+/* =============================================================================
+ *
+ * Waybar configuration
+ *
+ * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+ *
+ * =========================================================================== */
+
+/* -----------------------------------------------------------------------------
+ * Keyframes
+ * -------------------------------------------------------------------------- */
+@keyframes blink-warning {
+    70% {
+        color: #FFFFFF;
+    }
+
+    to {
+        color: #FFFFFF;
+        background-color: orange;
+    }
+}
+
+@keyframes blink-critical {
+    70% {
+      color: #FFFFFF;
+    }
+
+    to {
+        color: #FFFFFF;
+        background-color: #D47766;
+    }
+}
+@keyframes blink-notification {
+    70% {
+      color: #FFFFFF;
+    }
+
+    to {
+        color: #D47766;
+        background-color: #D47766;
+    }
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Base styles
+ * -------------------------------------------------------------------------- */
+
+/* Reset all styles */
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* The whole bar */
+#waybar {
+    background: #222222;
+    color: #FFFFFF;
+    font-family: Cantarell, Noto Sans, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    /* border-bottom-right-radius: 5px; */
+    /* border-bottom-left-radius: 5px; */
+}
+
+/* Each module */
+#battery,
+#clock,
+#cpu,
+#custom-keyboard-layout,
+#memory,
+#mode,
+#network,
+#pulseaudio,
+#temperature,
+#custom-power_profile,
+#custom-weather,
+#cpu,
+#keyboard-state,
+#clock,
+#memory,
+#battery,
+#pulseaudio,
+#network,
+#bluetooth,
+#temperature,
+#workspaces,
+#tray,
+#backlight,
+#language,
+#tray {
+    /* width 15px; */
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Module styles
+ * -------------------------------------------------------------------------- */
+
+#battery {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.warning {
+    color: #E49B5D;
+}
+
+#battery.critical {
+    color: #D47766;
+}
+
+#battery.warning.discharging {
+    animation-name: blink-warning;
+    animation-duration: 3s;
+}
+
+#battery.critical.discharging {
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+#clock {
+    font-weight: bold;
+}
+
+#cpu {
+  /* No styles */
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#cpu.warning {
+    color: #E49B5D;
+}
+
+#cpu.critical {
+    color: #D47766;
+}
+
+#memory {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#memory.warning {
+    color: #E49B5D;
+}
+
+#memory.critical {
+    color: #D47766;
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+#mode {
+    background: #64727D;
+    border-top: 2px solid #ECE1D7;
+    /* To compensate for the top border and still have vertical centering */
+    padding-bottom: 2px;
+}
+
+#network {
+    /* No styles */
+}
+
+#network.disconnected {
+    color: #E49B5D;
+}
+
+#pulseaudio {
+    /* No styles */
+}
+
+#pulseaudio.muted {
+    /* No styles */
+}
+
+#temperature {
+    /* No styles */
+}
+
+#temperature.critical {
+    color: #D47766;
+}
+
+#tray {
+    /* No styles */
+}
+
+#window {
+    font-weight: bold;
+}
+
+#workspaces button {
+    border-top: 2px solid transparent;
+    /* To compensate for the top border and still have vertical centering */
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #888888;
+}
+
+#workspaces button.active {
+    border-color: #4C7899;
+    color: #FFFFFF;
+    background-color: #285577;
+    /* background-color: #218FA6; */
+    font-weight: bold;
+}
+
+#workspaces button.urgent {
+    border-color: #D47766;
+    color: #D47766;
+}
+
+#pulseaudio {
+    /* position: relative */
+}

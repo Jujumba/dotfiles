@@ -1,0 +1,166 @@
+// =============================================================================
+//
+// Waybar configuration
+//
+// Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+//
+// =============================================================================
+
+{
+    // -------------------------------------------------------------------------
+    // Global configuration
+    // -------------------------------------------------------------------------
+
+    "layer": "top",
+
+    "position": "top",
+
+    // If height property would be not present, it'd be calculated dynamically
+    "height": 30,
+
+    "modules-left": ["clock","hyprland/workspaces", "hyprland/window"],
+    "modules-center": [],
+    "modules-right": [
+        "network",
+        "bluetooth",
+        "hyprland/language",
+        "backlight",
+        // "pulseaudio",
+        // "pulseaudio#microphone",
+        // "memory",
+        // "cpu",
+        "battery",
+        "tray"
+    ],
+
+
+    // -------------------------------------------------------------------------
+    // Modules
+    // -------------------------------------------------------------------------
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        }
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "tooltip": true,
+        "format-muted": "🔈 Muted",
+        "on-click": "pamixer -t",
+        "on-scroll-up": "pamixer -i 1",
+        "on-scroll-down": "pamixer -d 1",
+        "scroll-step": 1.0,
+        "max-volume": 200,
+        "format-icons": {
+            "headphone": "🎧",
+            "hands-free": "🎧",
+            "headset": "🎧",
+            "phone": "🔉",
+            "portable": "🔉",
+            "car": "🔉",
+            "default": ["🔈", "🔉", "🔉"]
+        }
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["🌑","🌒","🌓", "🌔", "☀️"],
+        "on-scroll-up": "brightnessctl set 1%+",
+        "on-scroll-down": "brightnessctl set 1%-",
+        "min-length": 6
+    },
+    "bluetooth": {
+	    // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+	    "format": "🔗",
+	    "format-off": "",
+	    "format-disabled": "",
+	    "format-connected": "🔗 {num_connections} ✅",
+	    "tooltip-format": "{controller_alias}\t{controller_address}",
+	    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+	    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    },
+    "battery": {
+        "interval": 1,
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+        // Connected to AC
+        "format": "🔌🔋 {capacity}%", // Icon: bolt
+        // Not connected to AC
+        "format-discharging": "🔋 {capacity}%",
+        "format-icons": [
+            "🪫", // Icon: battery-full
+            "🪫", // Icon: battery-three-quarters
+            "🔋", // Icon: battery-half
+            "🔋", // Icon: battery-quarter
+            "🔋"  // Icon: battery-empty
+        ],
+        "tooltip": true,
+        "interval": 1
+    },
+
+    "clock": {
+        //"format": "{:%I:%M %p %a, %b %e}", //    
+        "format": "{:%H:%M  %a,  %b  %e  %Y}", //    
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "cpu": {
+        "interval": 5,
+        "format": "📟 {usage}%", // Icon: microchip
+        "states": {
+          "warning": 70,
+          "critical": 90
+        }
+    },
+
+    "memory": {
+        "interval": 1,
+        "format": "💾 {}%", // Icon: memory
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+
+    "network": {
+        "interval": 1,
+        // "format-wifi": "📡 {essid} ({signalStrength}%)", // Icon: wifi
+        "format-wifi": "📡", // Icon: wifi
+        "format-ethernet": "📡", // Icon: ethernet
+        "format-disconnected": "📡❌",
+        "tooltip-format": "{ifname}: {ipaddr}"
+    },
+
+    "hyprland/language": {
+	    "format": "{}",
+	    "format-uk": "🇺🇦",
+	    "format-en": "🇺🇸"
+    },
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": "🎤 {volume}%",
+        "format-source-muted": "🎤 Muted",
+        "on-click": "pamixer --default-source -t",
+        "on-scroll-up": "pamixer --default-source -i 1",
+        "on-scroll-down": "pamixer --default-source -d 1",
+        "scroll-step": 3
+    },
+
+
+    "tray": {
+        "icon-size": 22,
+        "spacing": 10
+    }
+
+}
