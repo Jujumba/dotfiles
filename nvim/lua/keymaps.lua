@@ -18,6 +18,7 @@ vim.keymap.set('n', '<leader>fw', telescope_builtin.live_grep, { desc = 'Grep' }
 vim.keymap.set('n', '<leader>fs', telescope_builtin.lsp_document_symbols, { desc = 'LSP document symbols' })
 vim.keymap.set('n', '<leader>fW', telescope_builtin.lsp_workspace_symbols, { desc = 'LSP workspace symbols' })
 vim.keymap.set('n', '<leader>fm', telescope_builtin.man_pages, { desc = 'Man pages' })
+vim.keymap.set('n', '<leader>fr', telescope_builtin.lsp_references, { desc = 'Find references' })
 
 -- Buffers & Bufferline
 vim.keymap.set('n', '<leader>bb', '<cmd>BufferLinePick<cr>', { desc = 'Open selected buffer' })
@@ -28,7 +29,9 @@ vim.keymap.set('n', '<leader>bC', '<cmd>BufferLinePickClose<cr>', { desc = 'Clos
 
 -- Comment.nvim
 local esc = vim.api.nvim_replace_termcodes('<ESC>', true, false, true)
+local comment_api = require("Comment.api")
+vim.keymap.set('n', '<leader>/', comment_api.toggle.linewise.current)
 vim.keymap.set('x', '<leader>/', function()
     vim.api.nvim_feedkeys(esc, 'nx', false)
-    require("Comment.api").toggle.linewise(vim.fn.visualmode())
+    comment_api.toggle.linewise(vim.fn.visualmode())
 end)

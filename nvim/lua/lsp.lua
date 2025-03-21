@@ -2,14 +2,24 @@ local lspconfig = require('lspconfig')
 
 local on_attach = function(client, bufnr)
   vim.keymap.set("n", '<leader>r', vim.lsp.buf.rename)
-  vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, { reuse_win = true })
-  vim.keymap.set('n', '<leader>k', vim.lsp.buf.hover, {})
+  vim.keymap.set('n', 'gd', vim.lsp.buf.declaration, {})
+  vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
+
+  -- Add format on save
+  if client.server_capabilities.documentFormattingProvider then
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      buffer = bufnr,
+      callback = function()
+        vim.lsp.buf.format({ bufnr = bufnr, filter = function(c) return c.id == client.id end })
+      end,
+    })
+  end
 end
 
 -- Server-specific settings. See `:help lspconfig-setup`
 lspconfig.rust_analyzer.setup {
     on_attach = on_attach,
-    single_file_support = true
+    single_file_support = true,
 }
 
 lspconfig.clangd.setup {
@@ -21,6 +31,7 @@ lspconfig.pylyzer.setup {
 }
 
 local cmp = require('cmp')
+
 cmp.setup({
     snippet = {
         expand = function(args)
