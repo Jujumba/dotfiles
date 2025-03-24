@@ -2,7 +2,6 @@ vim.keymap.set('n', '<leader>e', '<cmd>Neotree toggle<cr>')
 
 -- Splits and navigating
 local smart_splits = require("smart-splits")
-
 vim.keymap.set('n', '<C-l>', smart_splits.move_cursor_right)
 vim.keymap.set('n', '<C-h>', smart_splits.move_cursor_left)
 vim.keymap.set('n', '<C-k>', smart_splits.move_cursor_up)
@@ -24,12 +23,14 @@ vim.keymap.set('n', '<leader>fr', telescope_builtin.lsp_references, { desc = 'Fi
 vim.keymap.set('n', '<leader>bb', '<cmd>BufferLinePick<cr>', { desc = 'Open selected buffer' })
 vim.keymap.set('n', '<leader>bc', '<cmd>bd<cr>', { desc = 'Close current buffer' })
 vim.keymap.set('n', '<leader>bp', '<c-t>', { desc = 'Open previous buffer' })
-vim.keymap.set('n', '<leader>w', '<cmd>bd<cr>', { desc = 'Close current buffer' } )
+vim.keymap.set('n', '<leader>c', '<cmd>bd<cr>', { desc = 'Close current buffer' } )
 vim.keymap.set('n', '<leader>bC', '<cmd>BufferLinePickClose<cr>', { desc = 'Close selected buffer' })
+vim.keymap.set('n', '<leader>bp', '<C-6>', { desc = 'Open previous buffer' })
 
 -- Comment.nvim
 local esc = vim.api.nvim_replace_termcodes('<ESC>', true, false, true)
 local comment_api = require("Comment.api")
+
 vim.keymap.set('n', '<leader>/', comment_api.toggle.linewise.current)
 vim.keymap.set('x', '<leader>/', function()
     vim.api.nvim_feedkeys(esc, 'nx', false)
