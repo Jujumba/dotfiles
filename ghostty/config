@@ -51,3 +51,4 @@ theme = Arthur
 font-size = 14
 cursor-style = block
 shell-integration-features = no-cursor
+confirm-close-surface = false
