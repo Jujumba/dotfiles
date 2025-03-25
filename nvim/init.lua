@@ -87,7 +87,19 @@ require("lazy").setup({
         { 'numToStr/Comment.nvim' },
 
     -- Multiline cursor
-        { 'mg979/vim-visual-multi' }
+        { 'mg979/vim-visual-multi' },
+
+    -- Function signature help
+        {
+          "ray-x/lsp_signature.nvim",
+          event = "InsertEnter",
+          opts = {
+            handler_opts = {
+              border = "rounded"
+            },
+            hint_prefix = ""
+          },
+         }
     },
 
     checker = { enabled = false },

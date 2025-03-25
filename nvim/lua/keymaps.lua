@@ -27,6 +27,8 @@ vim.keymap.set('n', '<leader>c', '<cmd>bd<cr>', { desc = 'Close current buffer' 
 vim.keymap.set('n', '<leader>bC', '<cmd>BufferLinePickClose<cr>', { desc = 'Close selected buffer' })
 vim.keymap.set('n', '<leader>bp', '<C-6>', { desc = 'Open previous buffer' })
 
+vim.keymap.set('n', 'E', vim.diagnostic.open_float, { desc = 'Hover LSP error' })
+
 -- Comment.nvim
 local esc = vim.api.nvim_replace_termcodes('<ESC>', true, false, true)
 local comment_api = require("Comment.api")
