@@ -63,7 +63,7 @@ bufferline.setup {
             end,
             show_buffer_icons = true, -- disable filetype icons for buffers
             show_buffer_close_icons = true,
-            show_close_icon = true ,
+            show_close_icon = true,
             show_tab_indicators = true,
             show_duplicate_prefix = false, -- whether to show duplicate buffer prefix
             duplicates_across_groups = false, -- whether to consider duplicate paths in different groups as duplicates
@@ -71,7 +71,7 @@ bufferline.setup {
             move_wraps_at_ends = false, -- whether or not the move command "wraps" at the first or last position
             -- can also be a table containing 2 custom separators
             -- [focused and unfocused]. eg: { '|', '|' }
-            separator_style = "thick",
+            separator_style = "thin",
             enforce_regular_tabs = false,
             always_show_bufferline = false,
             auto_toggle_bufferline = true,
@@ -82,7 +82,7 @@ bufferline.setup {
             },
             sort_by = 'insert_at_end',
             pick = {
-              alphabet = "abcdefghijklmopqrstuvwxyzABCDEFGHIJKLMOPQRSTUVWXYZ1234567890",
+              alphabet = "1234567890",
             },
         }
 }

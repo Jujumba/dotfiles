@@ -12,20 +12,31 @@ vim.keymap.set('n', '<leader>v', '<cmd>vsplit<cr>', { desc = 'Vertical split' })
 
 -- Search
 local telescope_builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', telescope_builtin.find_files, { desc = 'Find files' })
+vim.keymap.set('n', '<leader>ff', telescope_builtin.find_files, { desc = 'Search files' })
 vim.keymap.set('n', '<leader>fw', telescope_builtin.live_grep, { desc = 'Grep' })
-vim.keymap.set('n', '<leader>fs', telescope_builtin.lsp_document_symbols, { desc = 'LSP document symbols' })
-vim.keymap.set('n', '<leader>fW', telescope_builtin.lsp_workspace_symbols, { desc = 'LSP workspace symbols' })
-vim.keymap.set('n', '<leader>fm', telescope_builtin.man_pages, { desc = 'Man pages' })
-vim.keymap.set('n', '<leader>fr', telescope_builtin.lsp_references, { desc = 'Find references' })
+vim.keymap.set('n', '<leader>fs', telescope_builtin.lsp_document_symbols, { desc = 'Search LSP document symbols' })
+vim.keymap.set('n', '<leader>fW', telescope_builtin.lsp_workspace_symbols, { desc = 'Search LSP workspace symbols' })
+vim.keymap.set('n', '<leader>fm', telescope_builtin.man_pages, { desc = 'Search man pages' })
+vim.keymap.set('n', '<leader>fr', telescope_builtin.lsp_references, { desc = 'Search references' })
+vim.keymap.set('n', '<leader>fe', telescope_builtin.diagnostics, { desc = 'Search diagnostic errors' })
+vim.keymap.set('n', '<leader>fb', telescope_builtin.buffers, { desc = 'Search opened buffers' })
+-- Git related search
+vim.keymap.set('n', '<leader>fgs', telescope_builtin.git_status, { desc = 'Search git status' })
+vim.keymap.set('n', '<leader>fgc', telescope_builtin.git_commits, { desc = 'Search git commits' })
+vim.keymap.set('n', '<leader>fgb', telescope_builtin.git_branches, { desc = 'Search git branches' })
+
+
+-- LSP
+vim.keymap.set("n", '<leader>r', vim.lsp.buf.rename)
+vim.keymap.set('n', 'gd', vim.lsp.buf.declaration, {})
+vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 
 -- Buffers & Bufferline
 vim.keymap.set('n', '<leader>bb', '<cmd>BufferLinePick<cr>', { desc = 'Open selected buffer' })
 vim.keymap.set('n', '<leader>bc', '<cmd>bd<cr>', { desc = 'Close current buffer' })
-vim.keymap.set('n', '<leader>bp', '<c-t>', { desc = 'Open previous buffer' })
 vim.keymap.set('n', '<leader>c', '<cmd>bd<cr>', { desc = 'Close current buffer' } )
-vim.keymap.set('n', '<leader>bC', '<cmd>BufferLinePickClose<cr>', { desc = 'Close selected buffer' })
-vim.keymap.set('n', '<leader>bp', '<C-6>', { desc = 'Open previous buffer' })
+
+vim.keymap.set('n', '<leader><leader>', '<C-6>', { desc = 'Open previous buffer' })
 
 vim.keymap.set('n', 'E', vim.diagnostic.open_float, { desc = 'Hover LSP error' })
 

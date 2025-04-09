@@ -1,10 +1,10 @@
 local lspconfig = require('lspconfig')
 
 local on_attach = function(client, bufnr)
+
   vim.keymap.set("n", '<leader>r', vim.lsp.buf.rename)
   vim.keymap.set('n', 'gd', vim.lsp.buf.declaration, {})
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-
   -- Add format on save
   if client.server_capabilities.documentFormattingProvider then
     vim.api.nvim_create_autocmd("BufWritePre", {

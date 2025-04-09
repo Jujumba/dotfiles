@@ -99,7 +99,13 @@ require("lazy").setup({
             },
             hint_prefix = ""
           },
-         }
+         },
+
+    -- Colorizer
+        { "norcalli/nvim-colorizer.lua" },
+
+    -- Hightligth yank
+        { "machakann/vim-highlightedyank" },
     },
 
     checker = { enabled = false },
@@ -113,6 +119,7 @@ require("plugins.mason")
 require("plugins.autoclose")
 require("plugins.comment")
 require("highlight")
+require'colorizer'.setup()
 
 
 -- QOL
@@ -131,3 +138,5 @@ vim.cmd("set number")
 vim.cmd("set t_Co=16") -- Use terminal color for background
 vim.cmd("highlight Normal guibg=NONE guifg=NONE ctermbg=NONE ctermfg=NONE")
 vim.cmd("set notermguicolors")
+vim.cmd("let g:highlightedyank_highlight_duration = 100")
+vim.o.scrolloff = 8
