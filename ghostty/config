@@ -47,8 +47,9 @@
 # 2. ayu
 # 3. Desert
 # 4. Arthur
-theme = Arthur
-font-size = 14
+# 5. 0x96f
+theme = Desert
+font-size = 13
 cursor-style = block
 shell-integration-features = no-cursor
 confirm-close-surface = false
