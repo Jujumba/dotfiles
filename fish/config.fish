@@ -24,17 +24,16 @@ function py
     python $argv
 end
 
-function nullibreoffice
-    libreoffice $argv &> /dev/null &
-end
-
 function m
     math $argv
 end
+
 function detach
     $argv &> /dev/null &
 end
 
-set PATH $PATH /home/jujumba/.scripts /home/jujumba/.cargo/bin /home/jujumba/.local/bin
+set PATH $PATH /home/jujumba/.scripts /home/jujumba/.cargo/bin /home/jujumba/.local/bin /home/jujumba/.bun/bin
 
 set fish_greeting ""
+
+bind \e\t forward-char
