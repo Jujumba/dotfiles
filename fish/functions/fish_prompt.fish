@@ -8,5 +8,5 @@ function fish_prompt
     end
 
     string join '' -- '['(set_color brcyan) $USER (set_color normal) (set_color --bold) '@' (set_color normal) (set_color brcyan) $hostname (set_color normal) ']' \
-        ' ' (set_color --bold green) (prompt_pwd) (set_color normal) (set_color --bold brwhite) (fish_git_prompt) (set_color normal) $dollar
+        ' ' (set_color --bold green) (prompt_pwd -d 2) (set_color normal) (set_color --bold brwhite) (fish_git_prompt) (set_color normal) $dollar
 end
