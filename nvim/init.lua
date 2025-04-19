@@ -82,6 +82,8 @@ require("lazy").setup({
         { 'hrsh7th/nvim-cmp' },
         { 'hrsh7th/cmp-nvim-lsp' },
         { 'm4xshen/autoclose.nvim' },
+    -- LSP: Show function signature on top
+        { 'nvim-treesitter/nvim-treesitter-context' },
 
     -- Comment
         { 'numToStr/Comment.nvim' },
