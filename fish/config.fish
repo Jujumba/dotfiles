@@ -32,10 +32,14 @@ function detach
     $argv &> /dev/null &
 end
 
+function cwd
+    pwd | wl-copy
+end
+
 set PATH $PATH /home/jujumba/.scripts /home/jujumba/.cargo/bin /home/jujumba/.local/bin /home/jujumba/.bun/bin
 
 set fish_greeting ""
 
 bind \e\t forward-char
-bind \ek up-or-search
-bind \ej down-or-search
+bind \ek up-or-search   # Alt + k
+bind \ej down-or-search # Alt + j
