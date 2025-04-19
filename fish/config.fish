@@ -37,3 +37,5 @@ set PATH $PATH /home/jujumba/.scripts /home/jujumba/.cargo/bin /home/jujumba/.lo
 set fish_greeting ""
 
 bind \e\t forward-char
+bind \ek up-or-search
+bind \ej down-or-search
