@@ -48,7 +48,7 @@
 # 3. Desert
 # 4. Arthur
 # 5. 0x96f
-theme = Desert
+theme = gruber-darker
 font-size = 13
 cursor-style = block
 shell-integration-features = no-cursor
