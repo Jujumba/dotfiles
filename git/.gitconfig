@@ -9,6 +9,7 @@
 [core]
 	editor = nvim
 	fsmonitor = true
+	pager = diff-so-fancy | less --tabs=4 -RF
 [diff]
     algorithm = histogram
     colorMoved = plain
@@ -28,3 +29,5 @@
 	autocorrect = prompt
 [push]
 	autoSetupRemote = true
+[interactive]
+	diffFilter = diff-so-fancy --patch
