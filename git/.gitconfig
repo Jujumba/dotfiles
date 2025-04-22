@@ -1,0 +1,30 @@
+[include]
+    path = ./.user.gitconfig
+[alias]
+	a = add
+    al = add --all
+	c = commit -S
+	acn = commit -S --amend --no-message
+	s = status
+[core]
+	editor = nvim
+	fsmonitor = true
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
+[rerere]
+	enabled = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[init]
+	defaultBranch = main
+[commit]
+	verbose = true
+[help]
+	autocorrect = prompt
+[push]
+	autoSetupRemote = true
