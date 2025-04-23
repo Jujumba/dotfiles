@@ -15,6 +15,7 @@ vim.api.nvim_set_hl(0, "@variable", { link = "Normal" })
 
 -- Rust specific
 vim.api.nvim_set_hl(0, "rustCharacter", { ctermfg = "green" })
+vim.api.nvim_set_hl(0, "rustConditional", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "rustSigil", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@lsp.type.const.rust", { link = "Normal" })
 vim.api.nvim_set_hl(0, "rustFuncCall", { link = "Normal" })
