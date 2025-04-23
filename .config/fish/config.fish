@@ -36,6 +36,10 @@ function cwd
     pwd | wl-copy
 end
 
+function cl
+    clear
+end
+
 set PATH $PATH /home/jujumba/.scripts /home/jujumba/.cargo/bin /home/jujumba/.local/bin /home/jujumba/.bun/bin
 
 set fish_greeting ""

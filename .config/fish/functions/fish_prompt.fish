@@ -2,9 +2,9 @@ function fish_prompt
     set -l last_status $status
 
     if test $status -ne 0
-        set dollar (set_color brred) ' $ ' (set_color normal)
+        set dollar (set_color brred --bold) ' $ ' (set_color normal)
     else
-        set dollar (set_color brgreen) ' $ ' (set_color normal)
+        set dollar (set_color brgreen --bold) ' $ ' (set_color normal)
     end
 
     string join '' -- '['(set_color brcyan) $USER (set_color normal) (set_color --bold) '@' (set_color normal) (set_color brcyan) $hostname (set_color normal) ']' \
