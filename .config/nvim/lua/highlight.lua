@@ -11,6 +11,7 @@ vim.api.nvim_set_hl(0, "Type", { ctermfg = 12 })
 vim.api.nvim_set_hl(0, "Operator", { ctermfg = 5 })
 vim.api.nvim_set_hl(0, "Function", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@variable", { link = "Normal" })
+vim.api.nvim_set_hl(0, "Statement", { link = "Keyword" })
 
 
 -- Rust specific
