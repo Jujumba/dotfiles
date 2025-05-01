@@ -8,6 +8,7 @@
 	s = status
 	ol = log --oneline
 	olg = log --oneline --graph
+	ch = checkout
 [core]
 	editor = nvim
 	fsmonitor = true
