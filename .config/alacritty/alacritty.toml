@@ -4,11 +4,3 @@ size = 13.75
 
 [selection]
 save_to_clipboard = true
-
-[keyboard]
-bindings = [
-
-    { key = "L", mods = "Control|Shift", mode = "AppCursor | AppKeypad | Search | Alt | Vi", action = "ReceiveChar" },
-    { key = "L", mods = "Shift", action = "ReceiveChar" },
-    { key = "L", mods = "Control", action = "ReceiveChar" },
-]
