@@ -6,6 +6,8 @@
 	c = commit -S
 	acn = commit -S --amend --no-message
 	s = status
+	ol = log --oneline
+	olg = log --oneline --graph
 [core]
 	editor = nvim
 	fsmonitor = true
