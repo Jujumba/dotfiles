@@ -53,12 +53,3 @@ end)
 
 -- General
 vim.keymap.set('n', 'Q', '<cmd>:q<cr>', { desc = 'Exit NeoVim' })
-
-
--- Open Git status in NeoTree
-vim.keymap.set("n", "<leader>g",
-    function()
-        require("neo-tree.command").execute({ toggle = true, source = "git_status"})
-    end,
-    { desc = "Toggle Git status in NeoTree" }
-)
