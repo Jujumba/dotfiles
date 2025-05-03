@@ -1,7 +1,6 @@
 local lspconfig = require('lspconfig')
 
 local on_attach = function(client, bufnr)
-
   vim.keymap.set("n", '<leader>r', vim.lsp.buf.rename)
   vim.keymap.set('n', 'gd', vim.lsp.buf.declaration, {})
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
@@ -32,6 +31,7 @@ lspconfig.pylyzer.setup {
 
 local cmp = require('cmp')
 
+-- LSP suggestion shortcuts
 cmp.setup({
     snippet = {
         expand = function(args)
@@ -47,18 +47,30 @@ cmp.setup({
     })
 })
 
-require'treesitter-context'.setup{
-  enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
-  multiwindow = false, -- Enable multiwindow support.
-  max_lines = 1, -- How many lines the window should span. Values <= 0 mean no limit.
-  min_window_height = 1, -- Minimum editor window height to enable context. Values <= 0 mean no limit.
+-- Thing that prints context on top (fn decl, impl block etc)
+require('treesitter-context').setup{
+  enable = true,
+  multiwindow = false,
+  max_lines = 1,
+  min_window_height = 1,
   line_numbers = true,
-  multiline_threshold = 1, -- Maximum number of lines to show for a single context
-  trim_scope = 'outer', -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
-  mode = 'cursor',  -- Line used to calculate context. Choices: 'cursor', 'topline'
-  -- Separator between context and content. Should be a single character string, like '-'.
-  -- When separator is set, the context will only show up when there are at least 2 lines above cursorline.
+  multiline_threshold = 1,
+  trim_scope = 'outer',
+  mode = 'cursor', 
   separator = nil,
-  zindex = 20, -- The Z-index of the context window
-  on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
+  zindex = 20,
+  on_attach = nil,
 }
+
+-- Print LSP errors on the erroneous line
+vim.diagnostic.config({
+  virtual_text = {
+    severity = { min = vim.diagnostic.severity.WARN },
+    spacing = 2,
+    prefix = "",
+  },
+  -- Remove sign from the line number column
+  signs = false,
+  underline = true,
+  update_in_insert = false,
+})

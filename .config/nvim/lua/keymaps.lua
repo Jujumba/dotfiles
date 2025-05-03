@@ -32,7 +32,7 @@ vim.keymap.set('n', 'gd', vim.lsp.buf.declaration, {})
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 
 -- Buffers & Bufferline
-vim.keymap.set('n', '<leader>bb', '<cmd>BufferLinePick<cr>', { desc = 'Open selected buffer' })
+vim.keymap.set('n', '<leader>bb', telescope_builtin.buffers, { desc = 'Search opened buffers' })
 vim.keymap.set('n', '<leader>bc', '<cmd>bd<cr>', { desc = 'Close current buffer' })
 vim.keymap.set('n', '<leader>c', '<cmd>bd<cr>', { desc = 'Close current buffer' } )
 
@@ -49,3 +49,7 @@ vim.keymap.set('x', '<leader>/', function()
     vim.api.nvim_feedkeys(esc, 'nx', false)
     comment_api.toggle.linewise(vim.fn.visualmode())
 end)
+
+
+-- General
+vim.keymap.set('n', 'Q', '<cmd>:q<cr>', { desc = 'Exit NeoVim' })

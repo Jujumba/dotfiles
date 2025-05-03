@@ -12,6 +12,8 @@ vim.api.nvim_set_hl(0, "Operator", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "Function", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@variable", { link = "Normal" })
 vim.api.nvim_set_hl(0, "Statement", { link = "Keyword" })
+vim.api.nvim_set_hl(0, "LineNr", { ctermfg = 8, bold = true })
+vim.api.nvim_set_hl(0, "CursorLineNr", { ctermfg = 3, bold = true })
 
 
 -- Rust specific
@@ -30,7 +32,9 @@ vim.api.nvim_set_hl(0, "@lsp.type.property.rust", { link = "Normal" })
 
 -- Other language specific
 -- vim.api.nvim_set_hl(0, "pythonInclude", {})
-
 vim.api.nvim_set_hl(0, "zigMacro", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "@constructor.lua", { ctermfg = 7 })
  
+-- Status Line
+vim.api.nvim_set_hl(0, 'StatusLine', { ctermfg = 3, ctermbg = 0, bold = true })   -- Active status line
+vim.api.nvim_set_hl(0, 'StatusLineNC', { ctermfg = 8, ctermbg = 0 }) -- Inactive status line

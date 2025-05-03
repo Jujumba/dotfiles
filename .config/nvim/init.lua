@@ -66,11 +66,11 @@ require("lazy").setup({
         },
 
 	-- Bufferline
-        {
-	      'akinsho/bufferline.nvim',
-          version = "4.9.1",
-          dependencies = 'nvim-tree/nvim-web-devicons'
-        },
+       --  {
+	      -- 'akinsho/bufferline.nvim',
+       --    version = "4.9.1",
+       --    dependencies = 'nvim-tree/nvim-web-devicons'
+       --  },
 
     -- Mason
         {
@@ -116,13 +116,12 @@ require("lazy").setup({
 require("keymaps")
 require("lsp")
 require("plugins.neo-tree")
-require("plugins.bufferline")
+-- require("plugins.bufferline")
 require("plugins.mason")
 require("plugins.autoclose")
 require("plugins.comment")
 require("highlight")
-require'colorizer'.setup()
-
+require("statusline")
 
 -- QOL
 
@@ -138,7 +137,9 @@ vim.cmd("set clipboard=unnamedplus")
 vim.cmd("set relativenumber")
 vim.cmd("set number")
 vim.cmd("set t_Co=16") -- Use terminal color for background
-vim.cmd("highlight Normal guibg=NONE guifg=NONE ctermbg=NONE ctermfg=NONE")
 vim.cmd("set notermguicolors")
 vim.cmd("let g:highlightedyank_highlight_duration = 100")
+vim.opt.cursorline = true -- Enable `CursorLineNr` highlight group
+vim.opt.numberwidth = 2   -- Remove leading spaces in active line number
+vim.opt.fillchars = { eob = " " } -- Remove leading tildas after EOF
 vim.o.scrolloff = 8
