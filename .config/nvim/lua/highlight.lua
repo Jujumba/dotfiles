@@ -37,4 +37,4 @@ vim.api.nvim_set_hl(0, "@constructor.lua", { ctermfg = 7 })
  
 -- Status Line
 vim.api.nvim_set_hl(0, 'StatusLine', { ctermfg = 3, ctermbg = 0, bold = true })   -- Active status line
-vim.api.nvim_set_hl(0, 'StatusLineNC', { ctermfg = 8, ctermbg = 0 }) -- Inactive status line
+vim.api.nvim_set_hl(0, 'StatusLineNC', { ctermfg = 7, ctermbg = 0 }) -- Inactive status line
