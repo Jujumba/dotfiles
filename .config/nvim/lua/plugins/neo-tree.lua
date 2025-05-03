@@ -1,4 +1,8 @@
 require("neo-tree").setup({
+    source_selector = {
+        statusline = true, 
+    },
+
     filesystem = {
         filtered_items = {
               visible = true,
@@ -13,3 +17,4 @@ require("neo-tree").setup({
         },
     },
 })
+
