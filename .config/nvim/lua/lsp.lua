@@ -15,6 +15,15 @@ local on_attach = function(client, bufnr)
   end
 end
 
+local function lsp_fix()
+    vim.lsp.buf.code_action({
+        filter = function(a) return a.isPreferred end,
+        apply = true
+    })
+end
+
+vim.keymap.set("n", "<leader>lf", lsp_fix, {});
+
 -- Server-specific settings. See `:help lspconfig-setup`
 lspconfig.rust_analyzer.setup {
     on_attach = on_attach,
@@ -23,9 +32,14 @@ lspconfig.rust_analyzer.setup {
 
 lspconfig.clangd.setup {
     on_attach = on_attach,
+    -- cmd = {"clangd", "--std=c++23"}
 }
 
-lspconfig.pylyzer.setup {
+lspconfig.pyright.setup {
+    on_attach = on_attach,
+}
+
+lspconfig.lua_language_server.setup {
     on_attach = on_attach,
 }
 

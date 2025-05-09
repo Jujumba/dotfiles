@@ -103,9 +103,6 @@ require("lazy").setup({
           },
          },
 
-    -- Colorizer
-        { "norcalli/nvim-colorizer.lua" },
-
     -- Hightligth yank
         { "machakann/vim-highlightedyank" },
     },
@@ -140,6 +137,5 @@ vim.cmd("set t_Co=16") -- Use terminal color for background
 vim.cmd("set notermguicolors")
 vim.cmd("let g:highlightedyank_highlight_duration = 100")
 vim.opt.cursorline = true -- Enable `CursorLineNr` highlight group
-vim.opt.numberwidth = 2   -- Remove leading spaces in active line number
 vim.opt.fillchars = { eob = " " } -- Remove leading tildas after EOF
 vim.o.scrolloff = 8
