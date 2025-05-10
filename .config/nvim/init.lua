@@ -113,6 +113,7 @@ require("lazy").setup({
 require("keymaps")
 require("lsp")
 require("plugins.neo-tree")
+require("plugins.telescope")
 -- require("plugins.bufferline")
 require("plugins.mason")
 require("plugins.autoclose")
