@@ -1,5 +1,5 @@
 [include]
-    path = ./.user.gitconfig
+    path = .user-gitconfig
 [alias]
 	a = add
     al = add --all
@@ -34,3 +34,5 @@
 	autoSetupRemote = true
 [interactive]
 	diffFilter = diff-so-fancy --patch
+[gpg]
+    format = ssh
