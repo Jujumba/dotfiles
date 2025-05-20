@@ -2,13 +2,12 @@
 #   <https://ghostty.org/docs/config/reference>
 
 # Themes
-# 1. Firewatch
 # 2. ayu
 # 3. Desert
 # 4. Arthur
 # 5. 0x96f
 # 6. gruber-darker
-theme = gruber-darker
+theme = tokyonight_moon
 font-size = 13.75
 font-family = Iosevka
 font-family = Apple Color Emoji
