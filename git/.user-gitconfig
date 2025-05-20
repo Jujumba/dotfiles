@@ -1,4 +1,0 @@
-[user]
-	email = farid@jujumba.cc
-	name = Farid
-    signingkey = ~/.ssh/id_ed25519.pub
