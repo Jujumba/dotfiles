@@ -1,8 +1,8 @@
 clean:
 	for dir in .config/*/; do rm -i "/home/$$USER/$${dir%/}"; done
-	rm -i ~/.gitconfig ~/.user.gitconfig
+	rm -i ~/.gitconfig ~/.user-gitconfig
 	rm -i ~/.clang-format
-	rm -i ~/.cargo
+	rm -irf ~/.cargo
 
 install:	
 	stow . --ignore \git --ignore Makefile
