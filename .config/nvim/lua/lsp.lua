@@ -39,9 +39,13 @@ lspconfig.pyright.setup {
     on_attach = on_attach,
 }
 
-lspconfig.lua_language_server.setup {
+lspconfig.zls.setup {
     on_attach = on_attach,
 }
+
+-- lspconfig.lua_language_server.setup {
+--     on_attach = on_attach,
+-- }
 
 local cmp = require('cmp')
 
