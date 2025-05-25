@@ -23,14 +23,18 @@
             "ctrl-f": "vim::Search",
             "ctrl-r": "editor::FindAllReferences",
             "ctrl-shift-l": "pane::ActivateNextItem",
-            "ctrl-shift-h": "pane::ActivatePrevItem",
+            "ctrl-shift-h": "pane::ActivatePreviousItem",
             "ctrl-l": "workspace::ActivateNextPane",
-            "ctrl-h": "pane::ActivatePrevItem",
+            "ctrl-h": "pane::ActivatePreviousItem",
             "ctrl-b": "project_panel::Open",
-            // "ctrl-tab": "editor::NextInlineCompletion"
             "ctrl-right": "editor::SelectLargerSyntaxNode",
             "ctrl-left": "editor::SelectSmallerSyntaxNode",
             "ctrl-i": "project_panel::ToggleFocus"
+        }
+    },
+    {
+        "bindings": {
+            "ctrl-e": "workspace::ToggleLeftDock"
         }
     }
 ]
