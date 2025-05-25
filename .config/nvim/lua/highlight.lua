@@ -22,7 +22,7 @@ vim.api.nvim_set_hl(0, "PreProc", { link = "Keyword" })
 
 -- Rust specific
 vim.api.nvim_set_hl(0, "rustCharacter", { ctermfg = "green" })
-vim.api.nvim_set_hl(0, "rustEscape", { link = "@string.escape"})
+vim.api.nvim_set_hl(0, "rustEscape", { link = "@string.escape" })
 vim.api.nvim_set_hl(0, "rustConditional", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "rustSigil", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@lsp.type.const.rust", { link = "Normal" })
@@ -39,10 +39,10 @@ vim.api.nvim_set_hl(0, "@lsp.type.typeAlias.rust", { link = "Type" })
 -- Other language specific
 -- vim.api.nvim_set_hl(0, "pythonInclude", {})
 vim.api.nvim_set_hl(0, "zigMacro", { link = "Keyword" })
-vim.api.nvim_set_hl(0, "zigEscape", { link = "@string.escape"})
+vim.api.nvim_set_hl(0, "zigEscape", { link = "@string.escape" })
 vim.api.nvim_set_hl(0, "zigVarDecl", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "@constructor.lua", { ctermfg = 7 })
- 
+
 -- Status Line
-vim.api.nvim_set_hl(0, 'StatusLine', { ctermfg = 3, ctermbg = 0, bold = true })   -- Active status line
-vim.api.nvim_set_hl(0, 'StatusLineNC', { ctermfg = 7, ctermbg = 0 }) -- Inactive status line
+vim.api.nvim_set_hl(0, 'StatusLine', { ctermfg = 3, ctermbg = 0, bold = true }) -- Active status line
+vim.api.nvim_set_hl(0, 'StatusLineNC', { ctermfg = 7, ctermbg = 0 })            -- Inactive status line
