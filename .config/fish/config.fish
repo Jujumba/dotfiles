@@ -40,6 +40,10 @@ function cl
     clear
 end
 
+function ls
+    eza -A --time-style=long-iso $argv
+end
+
 set PATH $PATH /home/jujumba/.scripts /home/jujumba/.cargo/bin /home/jujumba/.local/bin /home/jujumba/.bun/bin
 
 set fish_greeting ""

@@ -7,7 +7,9 @@
 # 4. Arthur
 # 5. 0x96f
 # 6. gruber-darker
-theme = tokyonight_moon
+# 7. Monokai Pro Octagon
+# 8. tokyonight_moon
+theme = Monokai Pro Spectrum
 font-size = 13.75
 font-family = Iosevka
 font-family = Apple Color Emoji
