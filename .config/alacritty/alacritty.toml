@@ -1,6 +1,33 @@
 [font]
 normal = { family = "Iosevka", style = "Regular" }
-size = 13.75
+size = 13
+
+[window]
+padding = { x = 4, y = 4 }
 
 [selection]
 save_to_clipboard = true
+
+[colors.primary]
+background = '#282828'
+foreground = '#eeeeee'
+
+[colors.normal]
+black   = '#4c4c4c'
+red     = '#f43753'
+green   = '#c9d05c'
+yellow  = '#ffc24b'
+blue    = '#b3deef'
+magenta = '#d3b987'
+cyan    = '#73cef4'
+white   = '#eeeeee'
+
+[colors.bright]
+black   = '#5e5e5e'
+red     = '#f43753'
+green   = '#c9d05c'
+yellow  = '#ffc24b'
+blue    = '#b3deef'
+magenta = '#d3b987'
+cyan    = '#73cef4'
+white   = '#feffff'

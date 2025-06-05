@@ -277,6 +277,9 @@ switch to next activity=none,,Switch to Next Activity
 switch to previous activity=none,,Switch to Previous Activity
 toggle do not disturb=none,,Toggle do not disturb
 
+[services][org.kde.krunner.desktop]
+_launch=Alt+F2\tSearch
+
 [services][org.kde.spectacle.desktop]
 FullScreenScreenShot=Meta+Shift+S
 RecordWindow=none

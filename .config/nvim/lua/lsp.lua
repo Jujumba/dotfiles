@@ -84,7 +84,7 @@ require('treesitter-context').setup {
 vim.diagnostic.config({
     virtual_text = {
         severity = { min = vim.diagnostic.severity.WARN },
-        spacing = 2,
+        spacing = 0,
         prefix = "",
     },
     -- Remove sign from the line number column

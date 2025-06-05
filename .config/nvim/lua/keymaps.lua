@@ -7,12 +7,13 @@ vim.keymap.set('n', '<C-h>', smart_splits.move_cursor_left)
 vim.keymap.set('n', '<C-k>', smart_splits.move_cursor_up)
 vim.keymap.set('n', '<C-j>', smart_splits.move_cursor_down)
 
-vim.keymap.set('n', '<leader>h', '<cmd>split<cr>', { desc = 'Horizontal split'})
+vim.keymap.set('n', '<leader>h', '<cmd>split<cr>', { desc = 'Horizontal split' })
 vim.keymap.set('n', '<leader>v', '<cmd>vsplit<cr>', { desc = 'Vertical split' })
 
 -- Search
 local telescope_builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', function() telescope_builtin.find_files( { hidden = true }) end, { desc = 'Search files' })
+vim.keymap.set('n', '<leader>ff', function() telescope_builtin.find_files({ hidden = true }) end,
+    { desc = 'Search files' })
 vim.keymap.set('n', '<leader>fw', telescope_builtin.live_grep, { desc = 'Grep' })
 vim.keymap.set('n', '<leader>fs', telescope_builtin.lsp_document_symbols, { desc = 'Search LSP document symbols' })
 vim.keymap.set('n', '<leader>fW', telescope_builtin.lsp_workspace_symbols, { desc = 'Search LSP workspace symbols' })
@@ -34,7 +35,7 @@ vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 -- Buffers & Bufferline
 vim.keymap.set('n', '<leader>bb', telescope_builtin.buffers, { desc = 'Search opened buffers' })
 vim.keymap.set('n', '<leader>bc', '<cmd>bd<cr>', { desc = 'Close current buffer' })
-vim.keymap.set('n', '<leader>c', '<cmd>bd<cr>', { desc = 'Close current buffer' } )
+vim.keymap.set('n', '<leader>c', '<cmd>bd<cr>', { desc = 'Close current buffer' })
 
 vim.keymap.set('n', '<leader><leader>', '<C-6>', { desc = 'Open previous buffer' })
 

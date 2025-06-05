@@ -14,7 +14,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     end
 end
 vim.opt.rtp:prepend(lazypath)
-    
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
@@ -22,9 +22,9 @@ vim.g.maplocalleader = "\\"
 -- Plugins
 require("lazy").setup({
     spec = {
-        { "nvim-tree/nvim-web-devicons", lazy = true },
+        { "nvim-tree/nvim-web-devicons",  lazy = true },
 
-    -- Neo-tree
+        -- Neo-tree
         {
             "nvim-neo-tree/neo-tree.nvim",
             branch = "v3.x",
@@ -46,10 +46,10 @@ require("lazy").setup({
             end
         },
 
-    -- Smart-splits
+        -- Smart-splits
         { 'mrjones2014/smart-splits.nvim' },
 
-    -- Tree-sitter
+        -- Tree-sitter
         {
             'nvim-treesitter/nvim-treesitter',
             opts = {
@@ -59,51 +59,52 @@ require("lazy").setup({
             }
         },
 
-	-- Telescope
+        -- Telescope
         {
-         'nvim-telescope/telescope.nvim', tag = '0.1.8',
-          dependencies = { 'nvim-lua/plenary.nvim' }
+            'nvim-telescope/telescope.nvim',
+            tag = '0.1.8',
+            dependencies = { 'nvim-lua/plenary.nvim' }
         },
 
-	-- Bufferline
-       --  {
-	      -- 'akinsho/bufferline.nvim',
-       --    version = "4.9.1",
-       --    dependencies = 'nvim-tree/nvim-web-devicons'
-       --  },
+        -- Bufferline
+        --  {
+        -- 'akinsho/bufferline.nvim',
+        --    version = "4.9.1",
+        --    dependencies = 'nvim-tree/nvim-web-devicons'
+        --  },
 
-    -- Mason
+        -- Mason
         {
-          "williamboman/mason.nvim",
-          lazy = false
+            "williamboman/mason.nvim",
+            lazy = false
         },
-    -- LSP
+        -- LSP
         { "neovim/nvim-lspconfig" },
         { 'hrsh7th/nvim-cmp' },
         { 'hrsh7th/cmp-nvim-lsp' },
         { 'm4xshen/autoclose.nvim' },
-    -- LSP: Show function signature on top
+        -- LSP: Show function signature on top
         { 'nvim-treesitter/nvim-treesitter-context' },
 
-    -- Comment
+        -- Comment
         { 'numToStr/Comment.nvim' },
 
-    -- Multiline cursor
+        -- Multiline cursor
         { 'mg979/vim-visual-multi' },
 
-    -- Function signature help
+        -- Function signature help
         {
-          "ray-x/lsp_signature.nvim",
-          event = "InsertEnter",
-          opts = {
-            handler_opts = {
-              border = "rounded"
+            "ray-x/lsp_signature.nvim",
+            event = "InsertEnter",
+            opts = {
+                handler_opts = {
+                    border = "rounded"
+                },
+                hint_prefix = ""
             },
-            hint_prefix = ""
-          },
-         },
+        },
 
-    -- Hightligth yank
+        -- Hightligth yank
         { "machakann/vim-highlightedyank" },
     },
 
@@ -137,6 +138,6 @@ vim.cmd("set number")
 vim.cmd("set t_Co=16") -- Use terminal color for background
 vim.cmd("set notermguicolors")
 vim.cmd("let g:highlightedyank_highlight_duration = 100")
-vim.opt.cursorline = true -- Enable `CursorLineNr` highlight group
+vim.opt.cursorline = true         -- Enable `CursorLineNr` highlight group
 vim.opt.fillchars = { eob = " " } -- Remove leading tildas after EOF
-vim.o.scrolloff = 8
+vim.o.scrolloff = 4
