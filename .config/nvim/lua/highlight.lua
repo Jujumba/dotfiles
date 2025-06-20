@@ -3,7 +3,7 @@ vim.api.nvim_set_hl(0, "Keyword", { ctermfg = 5, --[[ bold = true ]] })
 vim.api.nvim_set_hl(0, "Statement", { ctermfg = "red", })
 vim.api.nvim_set_hl(0, "@string.escape", { ctermfg = 12 })
 vim.api.nvim_set_hl(0, "String", { ctermfg = 10 })
-vim.api.nvim_set_hl(0, "Constant", { ctermfg = 14 })
+vim.api.nvim_set_hl(0, "Constant", { ctermfg = 9 })
 vim.api.nvim_set_hl(0, "Delimiter", { ctermfg = 7 })
 vim.api.nvim_set_hl(0, "Type", { ctermfg = 12 })
 vim.api.nvim_set_hl(0, "LineNr", { ctermfg = 8, --[[ bold = true ]] })
@@ -18,6 +18,8 @@ vim.api.nvim_set_hl(0, "Function", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@variable", { link = "Normal" })
 vim.api.nvim_set_hl(0, "Statement", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "PreProc", { link = "Keyword" })
+vim.api.nvim_set_hl(0, "Identifier", { link = "Normal" })
+
 
 
 -- Rust specific
@@ -33,7 +35,8 @@ vim.api.nvim_set_hl(0, "rustModPath", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@lsp.type.macro.rust", { link = "Normal", italic = true })
 vim.api.nvim_set_hl(0, "@lsp.type.namespace.rust", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@lsp.type.property.rust", { link = "Normal" })
-vim.api.nvim_set_hl(0, "@lsp.type.typeAlias.rust", { link = "Type" })
+vim.api.nvim_set_hl(0, "@lsp.type.typeAlias.rust", { link = "Normal" })
+vim.api.nvim_set_hl(0, "@lsp.type.struct.rust", { link = "Normal" })
 
 
 -- Other language specific

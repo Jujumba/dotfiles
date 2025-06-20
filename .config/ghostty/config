@@ -10,10 +10,13 @@
 # 7. Monokai Pro Octagon
 # 8. tokyonight_moon
 # 9. Monokai Pro Spectrum
-theme = arcoiris-fork
+theme = abomination
 font-size = 13.5
 font-family = Iosevka
 font-family = Apple Color Emoji
+font-feature = -calt 
+font-feature = -liga
+font-feature = -dlig
 cursor-style = block
 shell-integration-features = no-cursor
 confirm-close-surface = false
