@@ -5,4 +5,4 @@ function num_lsp_errors()
     return count > 0 and ("" .. count) or ""
 end
 
-vim.opt.statusline = "%t %m%Y %l:%c %{v:lua.num_lsp_errors()}"
+vim.opt.statusline = "%t %Y %l:%c %{v:lua.num_lsp_errors()}%m"

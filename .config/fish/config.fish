@@ -44,6 +44,19 @@ function ls
     eza -A --time-style=long-iso $argv
 end
 
+# Git aliases
+function gs
+    git status $argv
+end
+
+function ga
+    git add $argv
+end
+
+function gc
+    git commit $argv
+end
+
 set PATH $PATH /home/jujumba/.scripts /home/jujumba/.cargo/bin /home/jujumba/.local/bin /home/jujumba/.bun/bin
 
 set fish_greeting ""
