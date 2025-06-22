@@ -1,63 +1,23 @@
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-end
-
 zoxide init fish | source
-
-function cd # Alias `cd` to `zoxide`
-    z $argv
-end
-
-function h
-    Hyprland $argv
-end
-
-function ipy
-    ipython $argv
-end
-
-function p
-    poweroff
-end
-
-function py
-    python $argv
-end
-
-function m
-    math $argv
-end
-
-function detach
-    $argv &> /dev/null &
-end
 
 function cwd
     pwd | wl-copy
 end
 
-function cl
-    clear
-end
-
-function ls
-    eza -A --time-style=long-iso $argv
-end
+alias cd=z
+alias p=poweroff
+alias m=math
+alias ipy=ipython
+alias py=python
+alias cl=clear
+alias ls="eza -A --time-style=long-iso"
 
 # Git aliases
-function gs
-    git status $argv
-end
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit"
 
-function ga
-    git add $argv
-end
-
-function gc
-    git commit $argv
-end
-
-set PATH $PATH /home/jujumba/.scripts /home/jujumba/.cargo/bin /home/jujumba/.local/bin /home/jujumba/.bun/bin
+set PATH $PATH  /home/jujumba/.cargo/bin /home/jujumba/.local/bin
 
 set fish_greeting ""
 set fish_color_command --bold blue
