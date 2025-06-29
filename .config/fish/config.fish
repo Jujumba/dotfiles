@@ -4,13 +4,15 @@ function cwd
     pwd | wl-copy
 end
 
+# Aliases
 alias cd=z
 alias p=poweroff
-alias m=math
+alias m="math '$argv'"
 alias ipy=ipython
 alias py=python
 alias cl=clear
-alias ls="eza -A --time-style=long-iso"
+alias objdump="objdump -M intel"
+# alias ls="eza -A --time-style=long-iso"
 
 # Git aliases
 alias gs="git status"
