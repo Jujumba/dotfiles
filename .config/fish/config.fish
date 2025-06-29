@@ -18,6 +18,9 @@ alias objdump="objdump -M intel"
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit"
+alias gd="git diff"
+alias gp="git push"
+alias gl="git pull"
 
 set PATH $PATH  /home/jujumba/.cargo/bin /home/jujumba/.local/bin
 
