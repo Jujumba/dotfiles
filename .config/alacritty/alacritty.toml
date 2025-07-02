@@ -15,21 +15,21 @@ foreground = "#eeeeee"
 [colors.normal]
 black   = "#333333"
 red     = "#da2700" # #99ad6a;
-green   = "#c9d05c"
+green   = "#6dd043"
 yellow  = "#ffc656"
 blue    = "#72dbf3" # 3c95da
-magenta = "#17af54"
+magenta = "#16b5e1"
 cyan    = "#71d7ff"
 white   = "#bab2b2"
 
 [colors.bright]
 black   = "#777777"
 red     = "#ffb9b9"
-green   = "#c2d884"
+green   = "#a6e175"
 yellow  = "#ffddaa"
 blue    = "#57c4df"
 magenta = "#cbbaf9"
-cyan    = "#9fe3d8"
+cyan    = "#a0f4ea"
 white   = "#efefef"
 
 
