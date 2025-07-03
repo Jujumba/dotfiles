@@ -30,7 +30,6 @@ vim.keymap.set('n', '<leader>fgb', telescope_builtin.git_branches, { desc = 'Sea
 -- LSP
 vim.keymap.set("n", '<leader>r', vim.lsp.buf.rename)
 vim.keymap.set('n', 'gd', vim.lsp.buf.declaration, {})
-vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 
 -- Buffers & Bufferline
 vim.keymap.set('n', '<leader>bb', telescope_builtin.buffers, { desc = 'Search opened buffers' })
@@ -39,7 +38,7 @@ vim.keymap.set('n', '<leader>c', '<cmd>bd<cr>', { desc = 'Close current buffer' 
 
 vim.keymap.set('n', '<leader><leader>', '<C-6>', { desc = 'Open previous buffer' })
 
-vim.keymap.set('n', 'E', vim.diagnostic.open_float, { desc = 'Hover LSP error' })
+vim.keymap.set('n', 'E', function() vim.diagnostic.open_float({ border = "rounded" }) end, { desc = 'Hover LSP error' })
 
 -- Comment.nvim
 local esc = vim.api.nvim_replace_termcodes('<ESC>', true, false, true)

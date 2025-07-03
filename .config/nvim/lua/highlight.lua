@@ -38,7 +38,7 @@ vim.api.nvim_set_hl(0, "@lsp.type.macro.rust", { link = "Normal", italic = true 
 vim.api.nvim_set_hl(0, "@lsp.type.namespace.rust", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@lsp.type.property.rust", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@lsp.type.typeAlias.rust", { link = "Normal" })
-vim.api.nvim_set_hl(0, "@lsp.type.struct.rust", { link = "Normal" })
+vim.api.nvim_set_hl(0, "@lsp.type.struct.rust", { link = "Type" })
 
 -- Other language specific
 -- vim.api.nvim_set_hl(0, "pythonInclude", {})

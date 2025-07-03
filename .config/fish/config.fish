@@ -25,7 +25,7 @@ alias gl="git pull"
 set PATH $PATH  /home/jujumba/.cargo/bin /home/jujumba/.local/bin
 
 set fish_greeting ""
-set fish_color_command --bold blue
+set fish_color_command --bold cyan
 
 bind \e\t forward-char
 bind \ek up-or-search   # Alt + k
