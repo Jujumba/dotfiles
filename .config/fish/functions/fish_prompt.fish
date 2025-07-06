@@ -6,5 +6,5 @@ function fish_prompt
         set dollar (set_color green) ' $ ' (set_color normal)
     end
 
-    string join '' (set_color green) (prompt_pwd) (set_color normal) (fish_git_prompt) (set_color cyan) $dollar (set_color normal)
+    string join '' (set_color --bold green) (prompt_pwd) (set_color normal) (fish_git_prompt) (set_color cyan) $dollar (set_color normal)
 end
