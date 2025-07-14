@@ -60,3 +60,13 @@ vim.api.nvim_set_hl(0, 'StatusLineNC', { ctermfg = 7, ctermbg = 0 })            
 
 -- Plugin specific
 vim.api.nvim_set_hl(0, 'NeoTreeCursorLine', { ctermbg = 8 })
+
+-- Highlight yanked area
+vim.api.nvim_create_autocmd('TextYankPost', {
+    group = vim.api.nvim_create_augroup('highlight_yank', {}),
+    desc = 'Hightlight selection on yank',
+    pattern = '*',
+    callback = function()
+        vim.highlight.on_yank { higroup = 'IncSearch', timeout = 100 }
+    end,
+})
