@@ -9,50 +9,25 @@ padding = { x = 4, y = 4 }
 save_to_clipboard = true
 
 [colors.primary]
-background = "#252525"
+background = '#282828'
 foreground = "#eeeeee"
 
 [colors.normal]
 black   = "#2f2f2f"
-red     = "#c34b4b"
-green   = "#c5ee78"
+red     = "#ff3e3e"
+green   = "#b0ee76"
 yellow  = "#f4bf75"
 blue    = "#78b6ce"
-magenta = "#ca96cc"
+magenta = "#dba4de"
 cyan    = "#91e1d2"
 white   = "#fdf2f2"
 
 [colors.bright]
 black   = "#7a7a7a"
-red     = "#d66161"
+red     = "#ff7265"
 green   = "#d0f07e"
 yellow  = "#ffdb6f"
-blue    = "#79c1e2"
+blue    = "#7ec8ea"
 magenta = "#d687dc"
-cyan    = "#92e3d3"
+cyan    = "#a4ffed"
 white   = "#ffffff"
-
-
-# [colors.primary]
-# background = '#282828'
-# foreground = '#fafafa'
-
-# [colors.normal]
-# black   = '#4c4c4c'
-# red     = '#f43753'
-# green   = '#c9d05c'
-# yellow  = '#ffc24b'
-# blue    = '#b3deef'
-# magenta = '#d3b987'
-# cyan    = '#73cef4'
-# white   = '#eeeeee'
-
-# [colors.bright]
-# black   = '#5e5e5e'
-# red     = '#f43753'
-# green   = '#c9d05c'
-# yellow  = '#ffc24b'
-# blue    = '#b3deef'
-# magenta = '#d3b987'
-# cyan    = '#73cef4'
-# white   = '#feffff'
