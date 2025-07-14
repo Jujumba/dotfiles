@@ -56,7 +56,7 @@ require("lazy").setup({
                 highlight = {
                     enable = true
                 }
-            }
+            },
         },
 
         -- Telescope
@@ -65,13 +65,6 @@ require("lazy").setup({
             tag = '0.1.8',
             dependencies = { 'nvim-lua/plenary.nvim' }
         },
-
-        -- Bufferline
-        --  {
-        -- 'akinsho/bufferline.nvim',
-        --    version = "4.9.1",
-        --    dependencies = 'nvim-tree/nvim-web-devicons'
-        --  },
 
         -- Mason
         {
@@ -83,6 +76,7 @@ require("lazy").setup({
         { 'hrsh7th/nvim-cmp' },
         { 'hrsh7th/cmp-nvim-lsp' },
         { 'm4xshen/autoclose.nvim' },
+
         -- LSP: Show function signature on top
         { 'nvim-treesitter/nvim-treesitter-context' },
 
