@@ -42,7 +42,8 @@ function nvim_fzf_edit
     if test $status -ne 0
         return
     end
-    nvim $fzf_result
+    commandline --replace "nvim $fzf_result"
+    commandline --function execute
 end
 
 function append_fzf_search
