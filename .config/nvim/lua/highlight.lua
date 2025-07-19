@@ -1,4 +1,4 @@
-vim.api.nvim_set_hl(0, "Number", { ctermfg = 4 })
+vim.api.nvim_set_hl(0, "Number", { ctermfg = 3 })
 vim.api.nvim_set_hl(0, "Keyword", { ctermfg = 5, bold = true })
 vim.api.nvim_set_hl(0, '@punctuation.delimiter.string', { ctermfg = 13 })
 vim.api.nvim_set_hl(0, "Statement", { ctermfg = "red", })
@@ -6,9 +6,9 @@ vim.api.nvim_set_hl(0, "@string.escape", { ctermfg = 12 })
 vim.api.nvim_set_hl(0, "String", { ctermfg = 10 })
 vim.api.nvim_set_hl(0, "Constant", { link = "Normal" })
 vim.api.nvim_set_hl(0, "Delimiter", { link = "Normal" })
-vim.api.nvim_set_hl(0, "Type", { ctermfg = 3 })
+vim.api.nvim_set_hl(0, "Type", { ctermfg = 4 })
 vim.api.nvim_set_hl(0, "LineNr", { ctermfg = 8 })
-vim.api.nvim_set_hl(0, "CursorLineNr", { ctermfg = 3, bold = true })
+vim.api.nvim_set_hl(0, "CursorLineNr", { ctermfg = 5, bold = true })
 vim.api.nvim_set_hl(0, "Function", { ctermfg = 12 })
 vim.cmd("highlight Visual ctermbg=8 ctermfg=15") -- nvim_set_hl doesn't work (even with force=true)
 
@@ -19,8 +19,6 @@ vim.api.nvim_set_hl(0, "@variable", { link = "Normal" })
 vim.api.nvim_set_hl(0, "Statement", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "PreProc", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "Identifier", { link = "Normal" })
-
-
 
 -- Rust specific
 vim.api.nvim_set_hl(0, "rustCharacter", { ctermfg = "green" })
@@ -44,7 +42,6 @@ vim.api.nvim_set_hl(0, "@lsp.type.const.rust", { link = "Constant" })
 vim.api.nvim_set_hl(0, "@lsp.type.operator.rust", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@lsp.type.generic.rust", { link = "Type" })
 
-
 -- Other language specific
 -- vim.api.nvim_set_hl(0, "pythonInclude", {})
 vim.api.nvim_set_hl(0, "zigMacro", { link = "Keyword" })
@@ -54,9 +51,8 @@ vim.api.nvim_set_hl(0, "cCharacter", { link = "String" })
 vim.api.nvim_set_hl(0, "@constructor.lua", { ctermfg = 7 })
 
 -- Status Line
-vim.api.nvim_set_hl(0, 'StatusLine', { ctermfg = 3, ctermbg = 0, bold = true }) -- Active status line
-vim.api.nvim_set_hl(0, 'StatusLineNC', { ctermfg = 7, ctermbg = 0 })            -- Inactive status line
-
+vim.cmd("highlight StatusLine ctermfg=3 ctermbg=0 cterm=bold")
+vim.cmd("highlight StatusLineNC ctermfg=7 ctermbg=0 cterm=NONE")
 
 -- Plugin specific
 vim.api.nvim_set_hl(0, 'NeoTreeCursorLine', { ctermbg = 8 })

@@ -30,7 +30,6 @@ set fish_greeting ""
 set fish_color_command --bold brblue
 
 bind \e\t forward-char
-bind \el forward-char           # Alt + l -> right
 bind \ek up-or-search           # Alt + k -> up
 bind \ej down-or-search         # Alt + j -> down
 bind \ec fish_clipboard_paste   # Alt + c -> paste
