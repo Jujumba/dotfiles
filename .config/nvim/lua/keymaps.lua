@@ -12,7 +12,7 @@ vim.keymap.set('n', '<leader>v', '<cmd>vsplit<cr>', { desc = 'Vertical split' })
 
 -- Search
 local telescope_builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', function() telescope_builtin.find_files({ hidden = true }) end,
+vim.keymap.set('n', '<leader>ff', function() telescope_builtin.find_files({ hidden = true, previewer = false }) end,
     { desc = 'Search files' })
 vim.keymap.set('n', '<leader>fw', telescope_builtin.live_grep, { desc = 'Grep' })
 vim.keymap.set('n', '<leader>fs', telescope_builtin.lsp_document_symbols, { desc = 'Search LSP document symbols' })
