@@ -8,7 +8,7 @@ vim.api.nvim_set_hl(0, "Constant", { link = "Normal" })
 vim.api.nvim_set_hl(0, "Delimiter", { link = "Normal" })
 vim.api.nvim_set_hl(0, "Type", { ctermfg = 4 })
 vim.api.nvim_set_hl(0, "LineNr", { ctermfg = 8 })
-vim.api.nvim_set_hl(0, "CursorLineNr", { ctermfg = 5, bold = true })
+vim.api.nvim_set_hl(0, "CursorLineNr", { ctermfg = 3, bold = true })
 vim.api.nvim_set_hl(0, "Function", { ctermfg = 12 })
 vim.cmd("highlight Visual ctermbg=8 ctermfg=15") -- nvim_set_hl doesn't work (even with force=true)
 

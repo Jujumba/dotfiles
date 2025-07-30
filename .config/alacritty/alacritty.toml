@@ -9,7 +9,7 @@ padding = { x = 4, y = 4 }
 save_to_clipboard = true
 
 [colors.primary]
-background = '#282828'
+background = '#303030'
 foreground = "#eeeeee"
 
 [colors.normal]
