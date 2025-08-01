@@ -1,5 +1,5 @@
 [font]
-normal = { family = "Iosevka", style = "Regular" }
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
 size = 13
 
 [window]
@@ -9,25 +9,25 @@ padding = { x = 4, y = 4 }
 save_to_clipboard = true
 
 [colors.primary]
-background = '#303030'
-foreground = "#eeeeee"
+background = '#ffffff'
+foreground = "#241f31"
 
 [colors.normal]
 black   = "#2f2f2f"
-red     = "#ff3e3e"
-green   = "#b0ee76"
-yellow  = "#f4bf75"
-blue    = "#78b6ce"
-magenta = "#d687dc"
-cyan    = "#91e1d2"
+red     = "#990000"
+green   = "#2ec27e"
+yellow  = "#f5c211"
+blue    = "#0086b3"
+magenta = "#9841bb"
+cyan    = "#0ab9dc"
 white   = "#fdf2f2"
 
 [colors.bright]
-black   = "#7a7a7a"
-red     = "#ff7265"
-green   = "#d0f07e"
-yellow  = "#ffdb6f"
+black   = "#434343"
+red     = "#dd1144"
+green   = "#4ac175"
+yellow  = "#f8e45c"
 blue    = "#7ec8ea"
-magenta = "#dba4de"
-cyan    = "#a4ffed"
+magenta = "#c061cb"
+cyan    = "#4fd2fd"
 white   = "#ffffff"

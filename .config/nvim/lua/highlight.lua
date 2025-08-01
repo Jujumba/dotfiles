@@ -1,20 +1,21 @@
 vim.api.nvim_set_hl(0, "Number", { ctermfg = 5 })
-vim.api.nvim_set_hl(0, "Keyword", { ctermfg = 4, bold = true })
+vim.api.nvim_set_hl(0, "Keyword", { ctermfg = 0, bold = true })
 vim.api.nvim_set_hl(0, '@punctuation.delimiter.string', { ctermfg = 13 })
 vim.api.nvim_set_hl(0, "Statement", { ctermfg = "red", })
 vim.api.nvim_set_hl(0, "@string.escape", { ctermfg = 12 })
-vim.api.nvim_set_hl(0, "String", { ctermfg = 10 })
+-- vim.api.nvim_set_hl(0, "String", { ctermfg = 10 })
 vim.api.nvim_set_hl(0, "Constant", { link = "Normal" })
 vim.api.nvim_set_hl(0, "Delimiter", { link = "Normal" })
-vim.api.nvim_set_hl(0, "Type", { ctermfg = 7 })
+vim.api.nvim_set_hl(0, "Type", { ctermfg = 4 })
 vim.api.nvim_set_hl(0, "LineNr", { ctermfg = 8 })
 vim.api.nvim_set_hl(0, "CursorLineNr", { ctermfg = 3, bold = true })
-vim.api.nvim_set_hl(0, "Function", { ctermfg = 7, bold = true })
 vim.api.nvim_set_hl(0, "MatchParen", { ctermfg = 9, bold = true })
 vim.cmd("highlight Visual ctermbg=8 ctermfg=15") -- nvim_set_hl doesn't work (even with force=true)
+vim.cmd("highlight String ctermfg=9")
+vim.cmd("highlight Function ctermfg=0")
 
 vim.api.nvim_set_hl(0, "@character", { link = "String" })
-vim.api.nvim_set_hl(0, "Comment", { ctermfg = 14 })
+vim.api.nvim_set_hl(0, "Comment", { ctermfg = 2 })
 vim.api.nvim_set_hl(0, "Operator", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "@variable", { link = "Normal" })
 vim.api.nvim_set_hl(0, "Statement", { link = "Keyword" })
@@ -51,13 +52,16 @@ vim.api.nvim_set_hl(0, "zigEscape", { link = "@string.escape" })
 vim.api.nvim_set_hl(0, "zigVarDecl", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "cCharacter", { link = "String" })
 vim.api.nvim_set_hl(0, "@constructor.lua", { ctermfg = 7 })
+vim.api.nvim_set_hl(0, "cStorageClass", { link = "Keyword" })
+vim.api.nvim_set_hl(0, "cTypedef", { link = "Keyword" })
+vim.api.nvim_set_hl(0, "cStructure", { link = "Keyword" })
 
 -- Status Line
-vim.cmd("highlight StatusLine ctermfg=3 ctermbg=0 cterm=bold")
-vim.cmd("highlight StatusLineNC ctermfg=7 ctermbg=0 cterm=NONE")
+vim.cmd("highlight StatusLine ctermfg=3 ctermbg=8 cterm=bold")
+vim.cmd("highlight StatusLineNC ctermfg=7 ctermbg=8 cterm=NONE")
 
 -- Plugin specific
-vim.api.nvim_set_hl(0, 'NeoTreeCursorLine', { ctermbg = 8 })
+vim.api.nvim_set_hl(0, 'NeoTreeCursorLine', { ctermbg = 8, ctermfg = 7 })
 
 -- Highlight yanked area
 vim.api.nvim_create_autocmd('TextYankPost', {
