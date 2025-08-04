@@ -27,7 +27,7 @@ alias gl="git pull"
 set PATH $PATH  /home/$USER/.cargo/bin
 
 set fish_greeting ""
-set fish_color_command --bold brblue
+set fish_color_command --bold blue
 
 bind \e\t forward-char
 bind \ek up-or-search           # Alt + k -> up
@@ -37,16 +37,19 @@ bind \ee "nvim_fzf_edit"        # Alt + e -> find file and edit
 bind \ef "append_fzf_search"    # Alt + f -> find file and append to prompt
 
 function nvim_fzf_edit
-    set fzf_result (fzf)
+    set fzf_result (fzf --border --color=16 --height ~100% --layout reverse)
+    commandline --function repaint  # clear fzf output
     if test $status -ne 0
         return
     end
     commandline --replace "nvim $fzf_result"
     commandline --function execute
+    # commandline --function repaint
 end
 
 function append_fzf_search
-    set fzf_result (fzf)
+    set fzf_result (fzf --border --color=16 --height ~100% --layout reverse)
+    commandline --function repaint  # clear fzf output
     if test $status -ne 0
         return
     end
