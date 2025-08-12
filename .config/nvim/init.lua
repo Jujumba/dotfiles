@@ -22,7 +22,7 @@ vim.g.maplocalleader = "\\"
 -- Plugins
 require("lazy").setup({
     spec = {
-        { "nvim-tree/nvim-web-devicons",  lazy = true },
+        { "nvim-tree/nvim-web-devicons",    lazy = true },
 
         -- Neo-tree
         {
@@ -50,14 +50,7 @@ require("lazy").setup({
         { 'mrjones2014/smart-splits.nvim' },
 
         -- Tree-sitter
-        {
-            'nvim-treesitter/nvim-treesitter',
-            opts = {
-                highlight = {
-                    enable = true
-                }
-            },
-        },
+        { 'nvim-treesitter/nvim-treesitter' },
 
         -- Telescope
         {
@@ -76,9 +69,6 @@ require("lazy").setup({
         { 'hrsh7th/nvim-cmp' },
         { 'hrsh7th/cmp-nvim-lsp' },
         { 'm4xshen/autoclose.nvim' },
-
-        -- LSP: Show function signature on top
-        { 'nvim-treesitter/nvim-treesitter-context' },
 
         -- Comment
         { 'numToStr/Comment.nvim' },
@@ -109,6 +99,7 @@ require("plugins.telescope")
 require("plugins.mason")
 require("plugins.autoclose")
 require("plugins.comment")
+require("plugins.treesitter")
 require("highlight")
 require("statusline")
 
@@ -128,6 +119,6 @@ vim.cmd("set number")
 vim.cmd("set t_Co=16") -- Use terminal color for background
 vim.cmd("set notermguicolors")
 -- vim.cmd("let g:highlightedyank_highlight_duration = 100")
-vim.opt.cursorline = true         -- Enable `CursorLineNr` highlight group
-vim.opt.fillchars = { eob = " " } -- Remove leading tildas after EOF
-vim.o.scrolloff = 4
+vim.opt.cursorline = true -- Enable `CursorLineNr` highlight group
+-- vim.opt.fillchars = { eob = " " } -- Remove leading tildas after EOF
+vim.o.scrolloff = 6
