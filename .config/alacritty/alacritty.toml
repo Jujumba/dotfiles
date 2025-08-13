@@ -10,24 +10,24 @@ save_to_clipboard = true
 
 [colors.primary]
 background = '#202020'
-foreground = "#ffffff"
+foreground = "#f5f3ff"
 
 [colors.normal]
 black   = "#2f2f2f"
-red     = "#ff3e3e"
+red     = "#eb98b5"
 green   = "#b0ee76"
-yellow  = "#f4bf75"
+yellow  = "#f6c177"
 blue    = "#78b6ce" # #78b6ce
 magenta = "#ff73fd"
 cyan    = "#91e1d2"
-white   = "#fdf2f2"
+white   = "#e9f9e4"
 
 [colors.bright]
-black   = "#7a7a7a"
-red     = "#ffb9b9"
-green   = "#d0f07e"
-yellow  = "#ffd7af"
-blue    = "#b0dbe2"
+black   = "#a29cc5"
+red     = "#ebbcba"
+green   = "#ebffce"
+yellow  = "#f4e4bd"
+blue    = "#9ccfd8"
 magenta = "#ff5ce9"
 cyan    = "#a4ffed"
 white   = "#ffffff"
