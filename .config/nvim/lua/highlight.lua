@@ -54,6 +54,7 @@ vim.api.nvim_set_hl(0, "@lsp.typemod.property.declaration", { link = "Type" })
 vim.api.nvim_set_hl(0, "@lsp.type.enumMember", { link = "@lsp.typemod.property.declaration" })
 vim.api.nvim_set_hl(0, "@lsp.type.operator", { ctermfg = 8 })
 vim.api.nvim_set_hl(0, "@punctuation.bracket", { ctermfg = 8 })
+vim.api.nvim_set_hl(0, "@punctuation.delimiter", { ctermfg = 8 })
 
 -- Status Line
 vim.cmd("highlight StatusLine ctermfg=3 ctermbg=0 cterm=bold")
