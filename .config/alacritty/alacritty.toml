@@ -13,7 +13,7 @@ background = '#202020'
 foreground = "#f5f3ff"
 
 [colors.normal]
-black   = "#2f2f2f"
+black   = "#25242d"
 red     = "#eb98b5"
 green   = "#b0ee76"
 yellow  = "#f6c177"
