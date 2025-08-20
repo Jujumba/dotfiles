@@ -18,13 +18,13 @@
     "theme": {
         "mode": "system",
         "light": "Zed Legacy: Atelier Dune Dark",
-        "dark": "Zed Legacy: Summercamp"
+        "dark": "Zed Legacy: Atelier Dune Dark"
     },
     "cursor_blink": false,
     "multi_cursor_modifier": "cmd_or_ctrl",
     "relative_line_numbers": true,
     "inlay_hints": {
-        "enabled": true,
+        "enabled": false,
         "show_type_hints": false,
         "show_parameter_hints": true,
         "show_other_hints": true,
