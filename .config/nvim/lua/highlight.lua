@@ -16,7 +16,7 @@ vim.cmd("highlight Visual ctermbg=8 ctermfg=15") -- nvim_set_hl doesn't work (ev
 
 
 vim.api.nvim_set_hl(0, "@character", { link = "String" })
-vim.api.nvim_set_hl(0, "Comment", { ctermfg = 8 })
+vim.api.nvim_set_hl(0, "Comment", { ctermfg = 7 })
 vim.api.nvim_set_hl(0, "Operator", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "@variable", { link = "Normal" })
 vim.api.nvim_set_hl(0, "Statement", { link = "Keyword" })
@@ -46,7 +46,6 @@ vim.api.nvim_set_hl(0, "zigMacro", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "zigEscape", { link = "@string.escape" })
 vim.api.nvim_set_hl(0, "zigVarDecl", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "cCharacter", { link = "String" })
--- vim.api.nvim_set_hl(0, "@constructor", { ctermfg = 7 })
 vim.api.nvim_set_hl(0, "@lsp.type.namespace", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@lsp.type.builtin", { ctermfg = 1, bold = true })
 vim.api.nvim_set_hl(0, "@function.builtin.asm", { ctermfg = 4 })
@@ -54,9 +53,9 @@ vim.api.nvim_set_hl(0, "@function.builtin.asm", { ctermfg = 4 })
 vim.api.nvim_set_hl(0, "@lsp.typemod.property.declaration", { link = "Type" })
 vim.api.nvim_set_hl(0, "@lsp.type.enumMember", { link = "@lsp.typemod.property.declaration" })
 vim.api.nvim_set_hl(0, "@constant.builtin", { ctermfg = 7, bold = true })
--- vim.api.nvim_set_hl(0, "@lsp.type.operator", { ctermfg = 8 })
 vim.api.nvim_set_hl(0, "@punctuation.bracket", { ctermfg = 8 })
 vim.api.nvim_set_hl(0, "@punctuation.delimiter", { ctermfg = 8 })
+vim.api.nvim_set_hl(0, "@constructor.lua", { ctermfg = 8 })
 
 -- Status Line
 vim.cmd("highlight StatusLine ctermfg=3 ctermbg=0 cterm=bold")
