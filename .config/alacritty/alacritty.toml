@@ -9,25 +9,25 @@ padding = { x = 4, y = 4 }
 save_to_clipboard = true
 
 [colors.primary]
-background = '#202020'
-foreground = "#f5f3ff"
+background = '#ffffff'
+foreground = "#000000"
 
 [colors.normal]
-black   = "#25242d"
-red     = "#eb98b5"
-green   = "#b0ee76"
-yellow  = "#f6c177"
-blue    = "#78b6ce" # #78b6ce
-magenta = "#ff73fd"
-cyan    = "#91e1d2"
-white   = "#e9f9e4"
+black   = "#25242d" # 0
+red     = "#a81a1a" # 1
+green   = "#0f4f24" # 2
+yellow  = "#b08000" # 3
+blue    = "#0057ae" # 4
+magenta = "#6141a5" # 5
+cyan    = "#376b6b" # 6
+white   = "#e0e9f8" # 7
 
 [colors.bright]
-black   = "#a29cc5"
-red     = "#ebbcba"
-green   = "#ebffce"
-yellow  = "#f4e4bd"
-blue    = "#9ccfd8"
-magenta = "#ff5ce9"
-cyan    = "#a4ffed"
-white   = "#ffffff"
+black   = "#767574" # 8
+red     = "#bf0303" # 9
+green   = "#045a22" # 10
+yellow  = "#f4e4bd" # 11
+blue    = "#0095ff" # 12
+magenta = "#da67da" # 13
+cyan    = "#a4ffed" # 14
+white   = "#ffffff" # 15
