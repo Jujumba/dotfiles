@@ -12,6 +12,7 @@ alias py=python
 alias cl=clear
 alias objdump="objdump -M intel"
 alias clip="wl-copy"
+alias vim="nvim"
 
 # Git aliases
 alias g="git"
@@ -36,7 +37,7 @@ bind \ee "nvim_fzf_edit"        # Alt + e -> find file and edit
 bind \ef "append_fzf_search"    # Alt + f -> find file and append to prompt
 
 function nvim_fzf_edit
-    set fzf_result (fzf --border --color=16 --height 30% --layout reverse)
+    set fzf_result (fzf --border --color=light --height 30% --layout reverse)
     set fzf_status $status
     commandline --function repaint
     if test $fzf_status -ne 0
@@ -48,7 +49,7 @@ function nvim_fzf_edit
 end
 
 function append_fzf_search
-    set fzf_result (fzf --border --color=16 --height 30% --layout reverse)
+    set fzf_result (fzf --border --color=light --height 30% --layout reverse)
     set fzf_status $status
     commandline --function repaint  # clear fzf output
     if test $fzf_status -ne 0
