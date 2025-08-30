@@ -10,8 +10,8 @@ vim.api.nvim_set_hl(0, "@type", { ctermfg = 4 })
 vim.api.nvim_set_hl(0, "LineNr", { ctermfg = 8 })
 vim.api.nvim_set_hl(0, "CursorLineNr", { ctermfg = 3, bold = true })
 vim.api.nvim_set_hl(0, "MatchParen", { ctermfg = 5, ctermbg = 7, bold = true })
-vim.api.nvim_set_hl(0, "Visual", { ctermfg = 15, ctermbg = 8 })
 vim.api.nvim_set_hl(0, "Function", { ctermfg = 6 })
+vim.cmd("highlight Visual ctermfg=8 ctermbg=7")
 
 vim.api.nvim_set_hl(0, "@character", { link = "String" })
 vim.api.nvim_set_hl(0, "@variable", { link = "Normal" })
@@ -41,11 +41,14 @@ vim.api.nvim_set_hl(0, "@lsp.type.namespace", { link = "Normal" })
 -- vim.api.nvim_set_hl(0, "@variable.member", { link = "Field" })
 -- vim.api.nvim_set_hl(0, "@lsp.typemod.property.declaration", { link = "Field" })
 -- vim.api.nvim_set_hl(0, "@lsp.type.enumMember", { link = "Field" })
-vim.api.nvim_set_hl(0, "@constant.builtin", { ctermfg = 4, bold = true })
+vim.api.nvim_set_hl(0, "BuiltinConstant", { ctermfg = 4, bold = true })
+vim.api.nvim_set_hl(0, "@constant.builtin", { link = "BuiltinConstant" })
+vim.api.nvim_set_hl(0, "@boolean", { link = "BuiltinConstant" })
 vim.api.nvim_set_hl(0, "@function.builtin", { ctermfg = 6, bold = true })
 
 -- Language specific
-vim.api.nvim_set_hl(0, "@function.builtin.asm", { ctermfg = 4 }) -- mnemonics
+vim.api.nvim_set_hl(0, "@function.builtin.asm", { ctermfg = 4 })              -- mnemonics
+vim.api.nvim_set_hl(0, "@keyword.import.zig", { link = "@function.builtin" }) -- mnemonics
 
 -- Comments
 vim.api.nvim_set_hl(0, "Comment", { ctermfg = 8 })
@@ -60,8 +63,9 @@ vim.cmd("highlight StatusLineNC ctermfg=8 ctermbg=7 cterm=NONE")
 -- Misc
 
 -- Plugin specific
-vim.api.nvim_set_hl(0, 'NeoTreeCursorLine', { ctermbg = 8 })
+vim.api.nvim_set_hl(0, "NeoTreeCursorLine", { ctermbg = 8 })
 vim.api.nvim_set_hl(0, "TelescopeSelection", { ctermbg = 7 })
+vim.api.nvim_set_hl(0, "TelescopeMatching", { ctermfg = 4, bold = true })
 
 -- Highlight yanked area
 vim.api.nvim_create_autocmd('TextYankPost', {
