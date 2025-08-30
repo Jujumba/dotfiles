@@ -63,6 +63,8 @@ vim.cmd("highlight StatusLineNC ctermfg=7 ctermbg=0 cterm=NONE")
 
 -- Plugin specific
 vim.api.nvim_set_hl(0, 'NeoTreeCursorLine', { ctermbg = 8 })
+vim.api.nvim_set_hl(0, "TelescopeSelection", { ctermfg = 3, ctermbg = 0 })
+vim.api.nvim_set_hl(0, "TelescopeMatching", { ctermfg = 2, bold = true })
 
 -- Highlight yanked area
 vim.api.nvim_create_autocmd('TextYankPost', {
