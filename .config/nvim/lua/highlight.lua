@@ -1,74 +1,78 @@
-vim.api.nvim_set_hl(0, "Number", { ctermfg = 5 })
-vim.api.nvim_set_hl(0, "Keyword", { ctermfg = 0, bold = true })
-vim.api.nvim_set_hl(0, '@punctuation.delimiter.string', { ctermfg = 13 })
-vim.api.nvim_set_hl(0, "Statement", { ctermfg = "red", })
+vim.highlight.priorities.treesitter = 150
+
+-- General
+vim.api.nvim_set_hl(0, "@number", { ctermfg = 12 })
+vim.api.nvim_set_hl(0, "Punctuation", { ctermfg = 13 })
+vim.api.nvim_set_hl(0, "@keyword", { ctermfg = 0, bold = true })
+vim.api.nvim_set_hl(0, "@string", { ctermfg = 9 })
 vim.api.nvim_set_hl(0, "@string.escape", { ctermfg = 12 })
--- vim.api.nvim_set_hl(0, "String", { ctermfg = 10 })
-vim.api.nvim_set_hl(0, "Constant", { link = "Normal" })
-vim.api.nvim_set_hl(0, "Delimiter", { link = "Normal" })
-vim.api.nvim_set_hl(0, "Type", { ctermfg = 4 })
+vim.api.nvim_set_hl(0, "@type", { ctermfg = 4 })
 vim.api.nvim_set_hl(0, "LineNr", { ctermfg = 8 })
 vim.api.nvim_set_hl(0, "CursorLineNr", { ctermfg = 3, bold = true })
-vim.api.nvim_set_hl(0, "MatchParen", { ctermfg = 9, bold = true })
-vim.cmd("highlight Visual ctermbg=8 ctermfg=15") -- nvim_set_hl doesn't work (even with force=true)
-vim.cmd("highlight String ctermfg=9")
-vim.cmd("highlight Function ctermfg=0")
+vim.api.nvim_set_hl(0, "MatchParen", { ctermfg = 5, ctermbg = 7, bold = true })
+vim.api.nvim_set_hl(0, "Function", { ctermfg = 6 })
+vim.cmd("highlight Visual ctermfg=8 ctermbg=7")
 
 vim.api.nvim_set_hl(0, "@character", { link = "String" })
-vim.api.nvim_set_hl(0, "Comment", { ctermfg = 2 })
-vim.api.nvim_set_hl(0, "Operator", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "@variable", { link = "Normal" })
 vim.api.nvim_set_hl(0, "Statement", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "PreProc", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "Identifier", { link = "Normal" })
 
--- Rust specific
-vim.api.nvim_set_hl(0, "rustCharacter", { ctermfg = "green" })
-vim.api.nvim_set_hl(0, "rustEscape", { link = "@string.escape" })
-vim.api.nvim_set_hl(0, "rustConditional", { link = "Keyword" })
-vim.api.nvim_set_hl(0, "rustSigil", { link = "Normal" })
-vim.api.nvim_set_hl(0, "rustLifetime", { link = "Constant" })
-vim.api.nvim_set_hl(0, "@lsp.type.const.rust", { link = "Normal" })
-vim.api.nvim_set_hl(0, "rustFuncCall", { link = "Function" })
-vim.api.nvim_set_hl(0, "@lsp.type.method.rust", { link = "Normal" })
-vim.api.nvim_set_hl(0, "rustStorage", { link = "Keyword" })
-vim.api.nvim_set_hl(0, "rustModPath", { link = "Normal" })
-vim.api.nvim_set_hl(0, "rustModPathSep", { link = "Normal" })
--- vim.api.nvim_set_hl(0, "@lsp.type.macro.rust", { link = "Function" })
-vim.api.nvim_set_hl(0, "@lsp.type.namespace.rust", { link = "Normal" })
-vim.api.nvim_set_hl(0, "@lsp.type.property.rust", { link = "Normal" })
-vim.api.nvim_set_hl(0, "@lsp.type.typeAlias.rust", { link = "Normal" })
-vim.api.nvim_set_hl(0, "@lsp.type.struct.rust", { link = "Type" })
-vim.api.nvim_set_hl(0, "@lsp.type.typeAlias.rust", { link = "Normal" })
-vim.api.nvim_set_hl(0, "@lsp.type.const.rust", { link = "Constant" })
-vim.api.nvim_set_hl(0, "@lsp.type.operator.rust", { link = "Normal" })
-vim.api.nvim_set_hl(0, "@lsp.type.generic.rust", { link = "Type" })
-vim.api.nvim_set_hl(0, "rustMacro", { link = "Function" })
 
--- Other language specific
--- vim.api.nvim_set_hl(0, "pythonInclude", {})
-vim.api.nvim_set_hl(0, "zigMacro", { link = "Keyword" })
-vim.api.nvim_set_hl(0, "zigEscape", { link = "@string.escape" })
-vim.api.nvim_set_hl(0, "zigVarDecl", { link = "Keyword" })
-vim.api.nvim_set_hl(0, "cCharacter", { link = "String" })
-vim.api.nvim_set_hl(0, "@constructor.lua", { ctermfg = 7 })
-vim.api.nvim_set_hl(0, "cStorageClass", { link = "Keyword" })
-vim.api.nvim_set_hl(0, "cTypedef", { link = "Keyword" })
-vim.api.nvim_set_hl(0, "cStructure", { link = "Keyword" })
+-- Punctuation and etc.
+vim.api.nvim_set_hl(0, "@module", { link = "Normal" })
+vim.api.nvim_set_hl(0, "@type.builtin", { ctermfg = 4, bold = true })
+vim.api.nvim_set_hl(0, "@punctuation.bracket", { link = "Punctuation" })
+vim.api.nvim_set_hl(0, "@punctuation.delimiter", { link = "Punctuation" })
+vim.api.nvim_set_hl(0, "@constructor.lua", { link = "Punctuation" })
+vim.api.nvim_set_hl(0, "@operator", { link = "Punctuation" })
+
+
+-- Language related
+vim.api.nvim_set_hl(0, "@lsp.type.typeAlias", { link = "Normal" })
+vim.api.nvim_set_hl(0, "@lsp.type.struct", { link = "Type" })
+vim.api.nvim_set_hl(0, "@lsp.type.const", { link = "Constant" })
+vim.api.nvim_set_hl(0, "@lsp.type.generic", { link = "Type" })
+vim.api.nvim_set_hl(0, "@lsp.typemod.property.declaration", { link = "Type" })
+vim.api.nvim_set_hl(0, "@lsp.type.namespace", { link = "Normal" })
+-- TODO: treesitter highlight is inconsitent
+-- vim.api.nvim_set_hl(0, "Field", { ctermfg = 5 })
+-- vim.api.nvim_set_hl(0, "@variable.member", { link = "Field" })
+-- vim.api.nvim_set_hl(0, "@lsp.typemod.property.declaration", { link = "Field" })
+-- vim.api.nvim_set_hl(0, "@lsp.type.enumMember", { link = "Field" })
+vim.api.nvim_set_hl(0, "BuiltinConstant", { ctermfg = 4, bold = true })
+vim.api.nvim_set_hl(0, "@constant.builtin", { link = "BuiltinConstant" })
+vim.api.nvim_set_hl(0, "@boolean", { link = "BuiltinConstant" })
+vim.api.nvim_set_hl(0, "@function.builtin", { ctermfg = 6, bold = true })
+
+-- Language specific
+vim.api.nvim_set_hl(0, "@function.builtin.asm", { ctermfg = 4 })              -- mnemonics
+vim.api.nvim_set_hl(0, "@keyword.import.zig", { link = "@function.builtin" }) -- mnemonics
+
+-- Comments
+vim.api.nvim_set_hl(0, "Comment", { ctermfg = 8 })
+vim.api.nvim_set_hl(0, "SpecialComment", { ctermfg = 4, ctermbg = 7 })
+vim.api.nvim_set_hl(0, "@comment.todo.comment", { link = "SpecialComment" })
+vim.api.nvim_set_hl(0, "@comment.error.comment", { link = "SpecialComment" })
 
 -- Status Line
-vim.cmd("highlight StatusLine ctermfg=3 ctermbg=8 cterm=bold")
-vim.cmd("highlight StatusLineNC ctermfg=7 ctermbg=8 cterm=NONE")
+vim.cmd("highlight StatusLine ctermfg=3 ctermbg=7 cterm=bold")
+vim.cmd("highlight StatusLineNC ctermfg=8 ctermbg=7 cterm=NONE")
+
+-- Misc
 
 -- Plugin specific
-vim.api.nvim_set_hl(0, 'NeoTreeCursorLine', { ctermbg = 8, ctermfg = 7 })
+vim.api.nvim_set_hl(0, "NeoTreeCursorLine", { ctermbg = 8 })
+vim.api.nvim_set_hl(0, "TelescopeSelection", { ctermbg = 7 })
+vim.api.nvim_set_hl(0, "TelescopeMatching", { ctermfg = 4, bold = true })
 
 -- Highlight yanked area
 vim.api.nvim_create_autocmd('TextYankPost', {
-    group = vim.api.nvim_create_augroup('highlight_yank', {}),
-    desc = 'Hightlight selection on yank',
-    pattern = '*',
-    callback = function()
-        vim.highlight.on_yank { higroup = 'IncSearch', timeout = 100 }
-    end,
+	group = vim.api.nvim_create_augroup('highlight_yank', {}),
+	desc = 'Hightlight selection on yank',
+	pattern = '*',
+	callback = function()
+		vim.highlight.on_yank { higroup = 'IncSearch', timeout = 100 }
+	end,
 })

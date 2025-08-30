@@ -7,13 +7,12 @@ end
 
 # Aliases
 alias cd=z
-alias p=poweroff
-alias m="math '$argv'"
 alias ipy=ipython
 alias py=python
 alias cl=clear
 alias objdump="objdump -M intel"
 alias clip="wl-copy"
+alias vim="nvim"
 
 # Git aliases
 alias g="git"
@@ -27,7 +26,8 @@ alias gl="git pull"
 set PATH $PATH  /home/$USER/.cargo/bin
 
 set fish_greeting ""
-set fish_color_command --bold brblue
+set fish_color_command --bold blue
+set fish_color_param brblue
 
 bind \e\t forward-char
 bind \ek up-or-search           # Alt + k -> up
@@ -37,17 +37,22 @@ bind \ee "nvim_fzf_edit"        # Alt + e -> find file and edit
 bind \ef "append_fzf_search"    # Alt + f -> find file and append to prompt
 
 function nvim_fzf_edit
-    set fzf_result (fzf)
-    if test $status -ne 0
+    set fzf_result (fzf --border --color=light --height 30% --layout reverse)
+    set fzf_status $status
+    commandline --function repaint
+    if test $fzf_status -ne 0
         return
     end
     commandline --replace "nvim $fzf_result"
     commandline --function execute
+    commandline --function repaint
 end
 
 function append_fzf_search
-    set fzf_result (fzf)
-    if test $status -ne 0
+    set fzf_result (fzf --border --color=light --height 30% --layout reverse)
+    set fzf_status $status
+    commandline --function repaint  # clear fzf output
+    if test $fzf_status -ne 0
         return
     end
     commandline --insert $fzf_result

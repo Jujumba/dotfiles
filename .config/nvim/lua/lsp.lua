@@ -60,25 +60,15 @@ cmp.setup({
         ['<Tab>'] = cmp.mapping.select_next_item(),
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
     }),
-    sources = cmp.config.sources({ { name = 'nvim_lsp' }, },
-        { { name = 'buffer' },
-        })
+    sources = cmp.config.sources(
+        { { name = 'nvim_lsp' }, },
+        { { name = 'buffer' } }
+    ),
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+    }
 })
-
--- Thing that prints context on top (fn decl, impl block etc)
-require('treesitter-context').setup {
-    enable = true,
-    multiwindow = false,
-    max_lines = 1,
-    min_window_height = 1,
-    line_numbers = true,
-    multiline_threshold = 1,
-    trim_scope = 'outer',
-    mode = 'cursor',
-    separator = nil,
-    zindex = 20,
-    on_attach = nil,
-}
 
 -- Print LSP errors on the erroneous line
 vim.diagnostic.config({
