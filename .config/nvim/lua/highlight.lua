@@ -3,7 +3,7 @@ vim.highlight.priorities.treesitter = 150
 -- General
 vim.api.nvim_set_hl(0, "@number", { ctermfg = 12 })
 vim.api.nvim_set_hl(0, "Punctuation", { ctermfg = 8 })
-vim.api.nvim_set_hl(0, "@keyword", { ctermfg = 4, bold = true })
+vim.api.nvim_set_hl(0, "@keyword", { ctermfg = 5 })
 vim.api.nvim_set_hl(0, "@string", { ctermfg = 10 })
 vim.api.nvim_set_hl(0, "@string.escape", { ctermfg = 12 })
 vim.api.nvim_set_hl(0, "@type", { ctermfg = 7 })
@@ -13,8 +13,8 @@ vim.api.nvim_set_hl(0, "CursorLineNr", { ctermfg = 3, bold = true })
 vim.api.nvim_set_hl(0, "MatchParen", { ctermfg = 8, ctermbg = 0, bold = true })
 vim.api.nvim_set_hl(0, "Visual", { ctermfg = 15, ctermbg = 8 })
 
-vim.api.nvim_set_hl(0, "@function", { ctermfg = 15 })
-vim.api.nvim_set_hl(0, "@function.builtin", { ctermfg = 15, bold = true })
+vim.api.nvim_set_hl(0, "@function", { ctermfg = 7 })
+vim.api.nvim_set_hl(0, "@function.builtin", { ctermfg = 7, bold = true })
 
 vim.api.nvim_set_hl(0, "@character", { link = "String" })
 vim.api.nvim_set_hl(0, "@variable", { link = "Normal" })

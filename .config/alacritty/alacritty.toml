@@ -14,13 +14,13 @@ foreground = "#e9eadb"
 
 [colors.normal]
 black   = "#25242d"
-red     = "#ac4242"
+red     = "#ce4545"
 green   = "#90a959"
 yellow  = "#f4bf75"
 blue    = "#78b6ce"
-magenta = "#bd7bbc"
-cyan    = "#75b5aa"
-white   = "#e3ffd4"
+magenta = "#d98ac8"
+cyan    = "#7ecfc8"
+white   = "#ebffe2"
 
 [colors.bright]
 black   = "#909090"
