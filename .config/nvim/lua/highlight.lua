@@ -2,6 +2,7 @@ vim.highlight.priorities.treesitter = 150
 
 -- General
 vim.api.nvim_set_hl(0, "@number", { ctermfg = 12 })
+vim.api.nvim_set_hl(0, "@number.float", { link = "@number" })
 vim.api.nvim_set_hl(0, "Punctuation", { ctermfg = 8 })
 vim.api.nvim_set_hl(0, "@keyword", { ctermfg = 5 })
 vim.api.nvim_set_hl(0, "@string", { ctermfg = 10 })
