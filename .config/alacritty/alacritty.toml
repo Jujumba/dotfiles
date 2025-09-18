@@ -13,14 +13,14 @@ background = '#202020'
 foreground = "#e9eadb"
 
 [colors.normal]
-black   = "#25242d"
+black   = "#262525"
 red     = "#ce4545"
-green   = "#90a959"
+green   = "#8ca356"
 yellow  = "#f4bf75"
-blue    = "#6a9fbc"
+blue    = "#71aac8"
 magenta = "#d98ac8"
 cyan    = "#7ecfc8"
-white   = "#ebffe2"
+white   = "#dcead4"
 
 [colors.bright]
 black   = "#909090"
