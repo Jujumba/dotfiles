@@ -40,7 +40,13 @@ local lsps = {
     clangd = {},
     pyright = {},
     zls = {},
-    lua_ls = {},
+    -- lua_ls = {
+    --     Lua = {
+    --         telemetry = {
+    --             enable = false
+    --         }
+    --     }
+    -- },
 }
 
 for lsp, opts in pairs(lsps) do
