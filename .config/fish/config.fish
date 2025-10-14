@@ -63,3 +63,7 @@ function kys
     set split (string trim $process | string split " ")
     kill -9 $split[1]
 end
+
+export LC_ALL=en_US.UTF-8
+export LC_DATE=de_DE.UTF-8
+export LANG=en_US.UTF-8

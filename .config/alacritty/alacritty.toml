@@ -9,7 +9,7 @@ padding = { x = 4, y = 4 }
 save_to_clipboard = true
 
 [colors.primary]
-background = '#202020'
+background = '#1e1e1e'
 foreground = "#e9eadb"
 
 [colors.normal]
@@ -26,7 +26,7 @@ white   = "#dcead4"
 black   = "#909090"
 red     = "#ff7777"
 green   = "#aac474"
-yellow  = "#feca88"
+yellow  = "#f6d573"
 blue    = "#8dd8f1"
 magenta = "#ea9ee0"
 cyan    = "#82f0d4"
