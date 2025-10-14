@@ -4,18 +4,18 @@ vim.highlight.priorities.treesitter = 150
 vim.api.nvim_set_hl(0, "@number", { ctermfg = 12 })
 vim.api.nvim_set_hl(0, "@number.float", { link = "@number" })
 vim.api.nvim_set_hl(0, "Punctuation", { ctermfg = 8 })
-vim.api.nvim_set_hl(0, "@keyword", { ctermfg = 5, bold = true })
-vim.api.nvim_set_hl(0, "@string", { ctermfg = 10 })
+vim.api.nvim_set_hl(0, "@keyword", { ctermfg = 3, bold = true })
+vim.api.nvim_set_hl(0, "@string", { ctermfg = 1 })
 vim.api.nvim_set_hl(0, "@string.escape", { ctermfg = 12 })
-vim.api.nvim_set_hl(0, "@type", { ctermfg = 11 })
-vim.api.nvim_set_hl(0, "@type.builtin", { ctermfg = 11, bold = true })
+vim.api.nvim_set_hl(0, "@type", { ctermfg = 6 })
+vim.api.nvim_set_hl(0, "@type.builtin", { ctermfg = 6, bold = true })
 vim.api.nvim_set_hl(0, "LineNr", { ctermfg = 8 })
 vim.api.nvim_set_hl(0, "CursorLineNr", { ctermfg = 3, bold = true })
 vim.api.nvim_set_hl(0, "MatchParen", { ctermfg = 8, ctermbg = 0, bold = true })
 vim.api.nvim_set_hl(0, "Visual", { ctermfg = 15, ctermbg = 8 })
 
-vim.api.nvim_set_hl(0, "@function", { link = "Normal" })
-vim.api.nvim_set_hl(0, "@function.builtin", { ctermfg = 7, bold = true })
+vim.api.nvim_set_hl(0, "@function", { ctermfg = 14 })
+vim.api.nvim_set_hl(0, "@function.builtin", { ctermfg = 14, bold = true })
 
 vim.api.nvim_set_hl(0, "@character", { link = "String" })
 vim.api.nvim_set_hl(0, "@variable", { link = "Normal" })
@@ -41,17 +41,17 @@ vim.api.nvim_set_hl(0, "@lsp.typemod.property.declaration", { link = "Type" })
 vim.api.nvim_set_hl(0, "@lsp.type.namespace", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@constructor", { link = "@function" })
 -- TODO: treesitter highlight is inconsitent
--- vim.api.nvim_set_hl(0, "Field", { ctermfg = 5 })
--- vim.api.nvim_set_hl(0, "@variable.member", { link = "Field" })
--- vim.api.nvim_set_hl(0, "@lsp.typemod.property.declaration", { link = "Field" })
--- vim.api.nvim_set_hl(0, "@lsp.type.enumMember", { link = "Field" })
+vim.api.nvim_set_hl(0, "Field", { ctermfg = 11 })
+vim.api.nvim_set_hl(0, "@variable.member", { link = "Field" })
+vim.api.nvim_set_hl(0, "@lsp.typemod.property.declaration", { link = "Field" })
+vim.api.nvim_set_hl(0, "@lsp.type.enumMember", { link = "Field" })
 vim.api.nvim_set_hl(0, "@constant.builtin", { ctermfg = 4, bold = true })
 
 -- Language specific
 vim.api.nvim_set_hl(0, "@function.builtin.asm", { ctermfg = 4 }) -- mnemonics
 
 -- Comments
-vim.api.nvim_set_hl(0, "Comment", { ctermfg = 8 })
+vim.api.nvim_set_hl(0, "Comment", { ctermfg = 4 })
 vim.api.nvim_set_hl(0, "SpecialComment", { ctermfg = 3, ctermbg = 8, bold = true })
 vim.api.nvim_set_hl(0, "@comment.todo.comment", { link = "SpecialComment" })
 vim.api.nvim_set_hl(0, "@comment.error.comment", { link = "SpecialComment" })
