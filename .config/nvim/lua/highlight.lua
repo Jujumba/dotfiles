@@ -15,7 +15,7 @@ vim.api.nvim_set_hl(0, "CursorLineNr", { ctermfg = 3, bold = true })
 vim.api.nvim_set_hl(0, "MatchParen", { ctermfg = 8, ctermbg = 0, bold = true })
 vim.api.nvim_set_hl(0, "Visual", { ctermfg = 15, ctermbg = 8 })
 
-vim.api.nvim_set_hl(0, "@function", { ctermfg = 14 })
+vim.api.nvim_set_hl(0, "@function", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@function.builtin", { ctermfg = 14, bold = true })
 
 vim.api.nvim_set_hl(0, "@character", { link = "String" })
