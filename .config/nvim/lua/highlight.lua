@@ -52,6 +52,7 @@ vim.api.nvim_set_hl(0, "@constant.builtin", { ctermfg = 12, bold = true })
 
 -- Language specific
 vim.api.nvim_set_hl(0, "@function.builtin.asm", { ctermfg = 4 }) -- mnemonics
+vim.api.nvim_set_hl(0, "@keyword.import.zig", { link = "@function.builtin" }) -- mnemonics
 
 -- Comments
 vim.api.nvim_set_hl(0, "Comment", { ctermfg = 12 })
