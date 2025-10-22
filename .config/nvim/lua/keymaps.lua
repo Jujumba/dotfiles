@@ -20,9 +20,10 @@ vim.keymap.set('n', '<leader>fW', telescope_builtin.lsp_workspace_symbols, { des
 vim.keymap.set('n', '<leader>fm', telescope_builtin.man_pages, { desc = 'Search man pages' })
 vim.keymap.set('n', '<leader>fr', telescope_builtin.lsp_references, { desc = 'Search references' })
 vim.keymap.set('n', '<leader>fe', telescope_builtin.diagnostics, { desc = 'Search diagnostic errors' })
-vim.keymap.set('n', '<leader>fb', telescope_builtin.buffers, { desc = 'Search opened buffers' })
+vim.keymap.set('n', '<leader>fb', function ( )telescope_builtin.buffers({ ignore_current_buffer = true, sort_lastused = true, previewer = false }) end, { desc = 'Search opened buffers' })
+vim.keymap.set('n', '<leader>tt', function ( )telescope_builtin.buffers({ ignore_current_buffer = true, sort_lastused = true, previewer = false }) end, { desc = 'Search opened buffers' })
 -- Git related search
-vim.keymap.set('n', '<leader>fgs', telescope_builtin.git_status, { desc = 'Search git status' })
+vim.keymap.set('n', '<leader>gs', telescope_builtin.git_status, { desc = 'Search git status' })
 vim.keymap.set('n', '<leader>fgc', telescope_builtin.git_commits, { desc = 'Search git commits' })
 vim.keymap.set('n', '<leader>fgb', telescope_builtin.git_branches, { desc = 'Search git branches' })
 
