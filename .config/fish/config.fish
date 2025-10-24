@@ -32,7 +32,7 @@ bind \ee "nvim_fzf_edit"        # Alt + e -> find file and edit
 bind \ef "append_fzf_search"    # Alt + f -> find file and append to prompt
 
 function nvim_fzf_edit
-    set fzf_result (fzf --border --color=dark --height 30% --layout reverse)
+    set fzf_result $(fzf --border --color=dark --height 30% --layout reverse)
     set fzf_status $status
     commandline --function repaint
     if test $fzf_status -ne 0
@@ -46,7 +46,7 @@ end
 function append_fzf_search
     set fzf_result (fzf --border --color=dark --height 30% --layout reverse)
     set fzf_status $status
-    commandline --function repaint  # clear fzf output
+    commandline --function repaint
     if test $fzf_status -ne 0
         return
     end
@@ -54,7 +54,7 @@ function append_fzf_search
 end
 
 function kys
-    set process (ps -eo pid,cmd,args | fzf --border --color=dark --height 30% --layout reverse)
+    set process (ps -eo pid,cmd,args | tail -n +2 | fzf --border --color=dark --height 30% --layout reverse)
     set fzf_status $status
     commandline --function repaint
     if test $fzf_status -ne 0
