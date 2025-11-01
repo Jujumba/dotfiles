@@ -65,7 +65,7 @@ require("lazy").setup({
             lazy = false
         },
         -- LSP
-        { "neovim/nvim-lspconfig" },
+        { "neovim/nvim-lspconfig" }, -- WARN: even though it's not used, lsp won't work without it
         { 'hrsh7th/nvim-cmp' },
         { 'hrsh7th/cmp-nvim-lsp' },
         { 'm4xshen/autoclose.nvim' },

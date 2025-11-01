@@ -1,13 +1,8 @@
 zoxide init fish | source
 
-# Copy Working Directory
-function cwd
-    pwd | wl-copy
-end
-
 # Aliases
 alias cd=z
-alias ipy=ipython
+alias bpy=bpython
 alias py=python
 alias cl=clear
 alias objdump="objdump -M intel"
@@ -23,11 +18,12 @@ alias gd="git diff"
 alias gp="git push"
 alias gl="git pull"
 
-set PATH $PATH  /home/$USER/.cargo/bin
+set PATH $PATH /home/$USER/.cargo/bin
 
 set fish_greeting ""
 set fish_color_command --bold blue
 set fish_color_param brblue
+set fish_color_comment brblack
 
 bind \e\t forward-char
 bind \ek up-or-search           # Alt + k -> up
@@ -37,7 +33,7 @@ bind \ee "nvim_fzf_edit"        # Alt + e -> find file and edit
 bind \ef "append_fzf_search"    # Alt + f -> find file and append to prompt
 
 function nvim_fzf_edit
-    set fzf_result (fzf --border --color=light --height 30% --layout reverse)
+    set fzf_result $(fzf --border --color=dark --height 30% --layout reverse)
     set fzf_status $status
     commandline --function repaint
     if test $fzf_status -ne 0
@@ -49,11 +45,26 @@ function nvim_fzf_edit
 end
 
 function append_fzf_search
-    set fzf_result (fzf --border --color=light --height 30% --layout reverse)
+    set fzf_result (fzf --border --color=dark --height 30% --layout reverse)
     set fzf_status $status
-    commandline --function repaint  # clear fzf output
+    commandline --function repaint
     if test $fzf_status -ne 0
         return
     end
     commandline --insert $fzf_result
 end
+
+function kys
+    set process (ps -eo pid,cmd,args | tail -n +2 | fzf --border --color=dark --height 30% --layout reverse)
+    set fzf_status $status
+    commandline --function repaint
+    if test $fzf_status -ne 0
+        return
+    end
+    set split (string trim $process | string split " ")
+    kill -9 $split[1]
+end
+
+export LC_ALL=en_US.UTF-8
+export LC_DATE=de_DE.UTF-8
+export LANG=en_US.UTF-8

@@ -1,5 +1,3 @@
-local lspconfig = require('lspconfig')
-
 vim.keymap.set("n", '<leader>r', vim.lsp.buf.rename)
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
 vim.keymap.set('n', 'K', function() vim.lsp.buf.hover({ border = "rounded" }) end, {})
@@ -25,26 +23,16 @@ local on_attach = function(client, bufnr)
     end
 end
 
-local function lsp_fix()
-    vim.lsp.buf.code_action({
-        filter = function(a) return a.isPreferred end,
-        apply = true
-    })
-end
-
-vim.keymap.set("n", "<leader>lf", lsp_fix, {});
-
--- Server-specific settings. See `:help lspconfig-setup`
+vim.lsp.enable({ "clangd", "zls", "rust_analyzer" })
 local lsps = {
     rust_analyzer = { single_file_support = true },
-    clangd = {},
-    pyright = {},
-    zls = {},
-    lua_ls = {},
+    clangd = { },
+    zls = { },
 }
 
 for lsp, opts in pairs(lsps) do
-    lspconfig[lsp].setup(vim.tbl_extend("force", { on_attach = on_attach }, opts))
+    opts["on_attach"] = on_attach
+    vim.lsp.config(tostring(lsp), opts)
 end
 
 local cmp = require('cmp')

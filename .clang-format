@@ -3,3 +3,5 @@ ColumnLimit: 100
 PointerAlignment: Right
 AllowShortIfStatementsOnASingleLine: Always
 AllowShortBlocksOnASingleLine: Never
+AlignConsecutiveMacros: true
+AlignConsecutiveDeclarations: true
