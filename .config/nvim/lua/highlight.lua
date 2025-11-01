@@ -18,7 +18,7 @@ vim.api.nvim_set_hl(0, "Visual", { ctermfg = 15, ctermbg = 8 })
 vim.api.nvim_set_hl(0, "@function", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@function.builtin", { ctermfg = 14, bold = true })
 
-vim.api.nvim_set_hl(0, "@character", { link = "String" })
+vim.api.nvim_set_hl(0, "@character", { link = "@string" })
 vim.api.nvim_set_hl(0, "@variable", { link = "Normal" })
 vim.api.nvim_set_hl(0, "Statement", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "PreProc", { link = "Keyword" })
@@ -44,6 +44,8 @@ vim.api.nvim_set_hl(0, "@lsp.typemod.property.declaration", { link = "Type" })
 vim.api.nvim_set_hl(0, "@lsp.type.namespace", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@constructor", { link = "@function" })
 vim.api.nvim_set_hl(0, "@variable.builtin.cpp", { link = "@variable" })
+vim.api.nvim_set_hl(0, "@variable.builtin.asm", { ctermfg = 11 })
+vim.api.nvim_set_hl(0, "@function.builtin.asm", { ctermfg = 3, bold = true })
 -- vim.api.nvim_set_hl(0, "@lsp.type.variable", { ctermfg = 15 })
 vim.api.nvim_set_hl(0, "Field", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@variable.member", { link = "Field" })
@@ -51,13 +53,13 @@ vim.api.nvim_set_hl(0, "@lsp.typemod.property.declaration", { link = "Field" })
 vim.api.nvim_set_hl(0, "@lsp.type.enumMember", { ctermfg = 13 })
 vim.api.nvim_set_hl(0, "@constant.builtin", { ctermfg = 12, bold = true })
 
--- Language specific
-vim.api.nvim_set_hl(0, "@function.builtin.asm", { ctermfg = 4 }) -- mnemonics
 vim.api.nvim_set_hl(0, "@keyword.import.zig", { link = "@function.builtin" }) -- mnemonics
+vim.api.nvim_set_hl(0, "@markup.raw.block", { link = "Normal" }) -- md code blocks
 
 -- Comments
 vim.api.nvim_set_hl(0, "Comment", { ctermfg = 12 })
-vim.api.nvim_set_hl(0, "SpecialComment", { ctermfg = 3, ctermbg = 8, bold = true })
+-- TODO: 
+vim.api.nvim_set_hl(0, "SpecialComment", { ctermfg = 14, ctermbg = 0, bold = true })
 vim.api.nvim_set_hl(0, "@comment.todo.comment", { link = "SpecialComment" })
 vim.api.nvim_set_hl(0, "@comment.error.comment", { link = "SpecialComment" })
 
