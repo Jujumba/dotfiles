@@ -5,3 +5,4 @@ AllowShortIfStatementsOnASingleLine: Always
 AllowShortBlocksOnASingleLine: Never
 AlignConsecutiveMacros: true
 AlignConsecutiveDeclarations: true
+IndentCaseLabels: true
