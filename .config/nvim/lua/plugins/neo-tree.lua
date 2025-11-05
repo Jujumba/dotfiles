@@ -1,19 +1,32 @@
-require("neo-tree").setup({
-    source_selector = {
-        statusline = true,
-    },
+-- require("neo-tree").setup({
+--     source_selector = {
+--         statusline = true,
+--     },
 
-    filesystem = {
-        filtered_items = {
-            visible = true,
-            hide_dotfiles = false,
-            hide_gitignored = false,
-        },
-        window = {
-            mappings = {
-                ["h"] = "toggle_node", -- Collapse
-                ["l"] = "open",        -- Open file or enter directory
-            },
-        },
-    },
-})
+--     filesystem = {
+--         filtered_items = {
+--             visible = true,
+--             hide_dotfiles = false,
+--             hide_gitignored = false,
+--         },
+--         window = {
+--             mappings = {
+--                 ["h"] = "toggle_node", -- Collapse
+--                 ["l"] = "open",        -- Open file or enter directory
+--             },
+--         },
+
+--     renderers = {
+--       directory = {
+--         {
+--           "name", 
+--           use_git_status_colors = true,
+--           trailing_slash = true
+--         },
+--         {"diagnostics"},
+--         {"git_status"},
+--       },
+--     }
+
+--     },
+-- })
