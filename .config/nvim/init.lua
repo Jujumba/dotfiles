@@ -118,7 +118,6 @@ vim.cmd("set relativenumber")
 vim.cmd("set number")
 vim.cmd("set t_Co=16") -- Use terminal color for background
 vim.cmd("set notermguicolors")
--- vim.cmd("let g:highlightedyank_highlight_duration = 100")
 vim.opt.cursorline = true -- Enable `CursorLineNr` highlight group
--- vim.opt.fillchars = { eob = " " } -- Remove leading tildas after EOF
 vim.o.scrolloff = 6
+vim.opt.fillchars:append({ diff = " " }) -- vimdiff fill char

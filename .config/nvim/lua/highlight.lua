@@ -71,11 +71,8 @@ vim.api.nvim_set_hl(0, "@keyword.import.zig", { link = "@function.builtin" }) --
 vim.api.nvim_set_hl(0, "@markup.raw.block", { link = "Normal" }) -- md code blocks
 
 -- This is a comment!
+-- TODO: NOTE: WARN: ERROR:
 vim.api.nvim_set_hl(0, "Comment", { ctermfg = 15 })
--- TODO: 
--- NOTE:
--- WARN:
--- ERROR:
 vim.api.nvim_set_hl(0, "SpecialComment", { ctermfg = 14, ctermbg = 0, bold = true })
 vim.api.nvim_set_hl(0, "ErrorComment", { ctermfg = 9, ctermbg = 0, bold = true })
 vim.api.nvim_set_hl(0, "@comment.todo.comment", { link = "SpecialComment" })
@@ -83,6 +80,11 @@ vim.api.nvim_set_hl(0, "@comment.note.comment", { link = "SpecialComment" })
 vim.api.nvim_set_hl(0, "@comment.error.comment", { link = "ErrorComment" })
 vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", dead_code)
 
+-- Git
+vim.api.nvim_set_hl(0, "DiffAdd", { ctermfg = 10, bold = true })
+vim.api.nvim_set_hl(0, "DiffTextAdd", { ctermfg = 14, bold = true })
+vim.api.nvim_set_hl(0, "DiffText", { ctermfg = 14, bold = true })
+vim.api.nvim_set_hl(0, "DiffDelete", { ctermfg = 9, bold = true })
 
 
 -- Status Line
