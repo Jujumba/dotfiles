@@ -5,12 +5,13 @@ local _function = { ctermfg = 10 };
 local type = { ctermfg = 12 };
 local type_builtin = { ctermfg = 12, bold = true };
 local field = { ctermfg = 3 };
-local constant = { ctermfg = 12 };
+local constant = { ctermfg = 14, bold = true };
 local number = { ctermfg = 13 };
 local boolean = constant;
 local punctuation = { ctermfg = 8 };
 local string = {ctermfg = 11 };
 local string_escape = { ctermfg = 12 };
+local dead_code = { ctermfg = 8 }
 
 -- General
 vim.api.nvim_set_hl(0, "@number", number)
@@ -35,7 +36,7 @@ vim.api.nvim_set_hl(0, "@variable", { link = "Normal" })
 vim.api.nvim_set_hl(0, "Statement", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "PreProc", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "Identifier", { link = "Normal" })
-vim.api.nvim_set_hl(0, "@boolean", { link = "constant" })
+vim.api.nvim_set_hl(0, "@boolean", constant)
 
 
 -- Punctuation and etc.
@@ -44,7 +45,6 @@ vim.api.nvim_set_hl(0, "@punctuation.bracket", { link = "Punctuation" })
 vim.api.nvim_set_hl(0, "@punctuation.delimiter", { link = "Punctuation" })
 vim.api.nvim_set_hl(0, "@constructor.lua", { link = "Punctuation" })
 vim.api.nvim_set_hl(0, "@operator", keyword)
--- vim.api.nvim_set_hl(0, "@lsp.type.operator", { ctermfg = 13, bold = true })
 
 -- Language related
 vim.api.nvim_set_hl(0, "@lsp.type.typeAlias", { link = "Normal" })
@@ -57,12 +57,12 @@ vim.api.nvim_set_hl(0, "@constructor", _function)
 vim.api.nvim_set_hl(0, "@variable.builtin.cpp", { link = "@variable" })
 vim.api.nvim_set_hl(0, "@variable.builtin.asm", { ctermfg = 11 })
 vim.api.nvim_set_hl(0, "@function.builtin.asm", { ctermfg = 3, bold = true })
--- vim.api.nvim_set_hl(0, "@lsp.type.variable", { ctermfg = 15 })
 vim.api.nvim_set_hl(0, "Field", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@variable.member", { link = "Field" })
 vim.api.nvim_set_hl(0, "@lsp.typemod.property.declaration", { link = "Field" })
 vim.api.nvim_set_hl(0, "@lsp.type.enumMember", { ctermfg = 13 })
-vim.api.nvim_set_hl(0, "@constant.builtin", { ctermfg = 14, bold = true })
+vim.api.nvim_set_hl(0, "@constant.builtin", constant)
+vim.api.nvim_set_hl(0, "@property.toml", { link = Normal })
 
 vim.api.nvim_set_hl(0, "@variable.member", field)
 vim.api.nvim_set_hl(0, "@property", field)
@@ -70,8 +70,8 @@ vim.api.nvim_set_hl(0, "@property", field)
 vim.api.nvim_set_hl(0, "@keyword.import.zig", { link = "@function.builtin" }) -- mnemonics
 vim.api.nvim_set_hl(0, "@markup.raw.block", { link = "Normal" }) -- md code blocks
 
--- Comments
-vim.api.nvim_set_hl(0, "Comment", { ctermfg = 12 })
+-- This is a comment!
+vim.api.nvim_set_hl(0, "Comment", { ctermfg = 15 })
 -- TODO: 
 -- NOTE:
 -- WARN:
@@ -81,6 +81,9 @@ vim.api.nvim_set_hl(0, "ErrorComment", { ctermfg = 9, ctermbg = 0, bold = true }
 vim.api.nvim_set_hl(0, "@comment.todo.comment", { link = "SpecialComment" })
 vim.api.nvim_set_hl(0, "@comment.note.comment", { link = "SpecialComment" })
 vim.api.nvim_set_hl(0, "@comment.error.comment", { link = "ErrorComment" })
+vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", dead_code)
+
+
 
 -- Status Line
 vim.cmd("highlight StatusLine ctermfg=3 ctermbg=0 cterm=bold")
