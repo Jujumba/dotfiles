@@ -2,11 +2,8 @@ zoxide init fish | source
 
 # Aliases
 alias cd=z
-alias bpy=bpython
-alias py=python
 alias cl=clear
 alias objdump="objdump -M intel"
-alias clip="wl-copy"
 alias vim="nvim"
 
 # Git aliases
@@ -24,6 +21,7 @@ set fish_greeting ""
 set fish_color_command --bold blue
 set fish_color_param brblue
 set fish_color_comment brblack
+set fish_color_option --bold cyan
 
 bind \e\t forward-char
 bind \ek up-or-search           # Alt + k -> up
