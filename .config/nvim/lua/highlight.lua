@@ -26,7 +26,7 @@ vim.api.nvim_set_hl(0, "@type.builtin", type_builtin)
 vim.api.nvim_set_hl(0, "LineNr", { ctermfg = 8 })
 vim.api.nvim_set_hl(0, "CursorLineNr", { ctermfg = 3, bold = true })
 vim.api.nvim_set_hl(0, "MatchParen", { ctermfg = 12, ctermbg = 0, bold = true })
-vim.api.nvim_set_hl(0, "Visual", { ctermfg = 15, ctermbg = 8 })
+vim.api.nvim_set_hl(0, "Visual", { nil, nil, reverse = true })
 
 vim.api.nvim_set_hl(0, "@function", _function)
 vim.api.nvim_set_hl(0, "@function.builtin", _function)
@@ -72,7 +72,9 @@ vim.api.nvim_set_hl(0, "@markup.raw.block", { link = "Normal" }) -- md code bloc
 
 -- This is a comment!
 -- TODO: NOTE: WARN: ERROR:
-vim.api.nvim_set_hl(0, "Comment", { ctermfg = 15 })
+-- ERROR: 
+-- NOTE:
+vim.api.nvim_set_hl(0, "Comment", { ctermfg = 7 })
 vim.api.nvim_set_hl(0, "SpecialComment", { ctermfg = 14, ctermbg = 0, bold = true })
 vim.api.nvim_set_hl(0, "ErrorComment", { ctermfg = 9, ctermbg = 0, bold = true })
 vim.api.nvim_set_hl(0, "@comment.todo.comment", { link = "SpecialComment" })
@@ -106,6 +108,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     desc = 'Hightlight selection on yank',
     pattern = '*',
     callback = function()
-        vim.highlight.on_yank { higroup = 'IncSearch', timeout = 100 }
+        vim.highlight.on_yank { higroup = 'Visual', timeout = 100 }
     end,
 })
