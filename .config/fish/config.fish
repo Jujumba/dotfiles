@@ -1,5 +1,9 @@
 zoxide init fish | source
 
+export LC_ALL=en_US.UTF-8
+export LC_DATE=de_DE.UTF-8
+export LANG=en_US.UTF-8
+
 # Aliases
 alias cd=z
 alias cl=clear
@@ -21,14 +25,18 @@ set fish_greeting ""
 set fish_color_command --bold blue
 set fish_color_param brblue
 set fish_color_comment brblack
-set fish_color_option --bold cyan
+set fish_color_option --bold brcyan
+
 
 bind \e\t forward-char
-bind \ek up-or-search           # Alt + k -> up
-bind \ej down-or-search         # Alt + j -> down
-bind \ec fish_clipboard_paste   # Alt + c -> paste
-bind \ee "nvim_fzf_edit"        # Alt + e -> find file and edit
-bind \ef "append_fzf_search"    # Alt + f -> find file and append to prompt
+# TODO: unbind properly
+# bind --erase --mode default \cl
+bind \cl __null                 # Ctrl  + l  -> noop
+bind \ek up-or-search           # Alt   + k   -> up
+bind \ej down-or-search         # Alt   + j   -> down
+bind \ec fish_clipboard_paste   # Alt   + c   -> paste
+bind \ee "nvim_fzf_edit"        # Alt   + e   -> find file and edit
+bind \ef "append_fzf_search"    # Alt   + f   -> find file and append to prompt
 
 function nvim_fzf_edit
     set fzf_result $(fzf --border --color=dark --height 30% --layout reverse)
@@ -63,6 +71,6 @@ function kys
     kill -9 $split[1]
 end
 
-export LC_ALL=en_US.UTF-8
-export LC_DATE=de_DE.UTF-8
-export LANG=en_US.UTF-8
+function __null
+end
+
