@@ -20,7 +20,7 @@ yellow  = "#f4d381"
 blue    = "#739cd9"
 magenta = "#d98ac8"
 cyan    = "#6CBBBF"
-white   = "#EAEAD3"
+white   = "#d0d0bc"
 
 [colors.bright]
 black   = "#a2a2a2"
@@ -32,8 +32,3 @@ magenta = "#e4abfc"
 cyan    = "#91E0E4"
 white   = "#d9fff4"
 
-# Disable binding for `Ctrl+l`
-[[keyboard.bindings]]
-key = "L"
-mods = "Control"
-chars = ""
