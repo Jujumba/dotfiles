@@ -22,7 +22,7 @@ vim.g.maplocalleader = "\\"
 -- Plugins
 require("lazy").setup({
     spec = {
-        { "nvim-tree/nvim-web-devicons",    lazy = true },
+        { "nvim-tree/nvim-web-devicons", lazy = false },
 
         -- Neo-tree
         {

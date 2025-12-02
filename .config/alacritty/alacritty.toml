@@ -1,6 +1,6 @@
 [font]
 normal = { family = "Iosevka", style = "Regular" }
-size = 14
+size = 18
 
 [window]
 padding = { x = 4, y = 4 }
@@ -9,7 +9,7 @@ padding = { x = 4, y = 4 }
 save_to_clipboard = true
 
 [colors.primary]
-background = '#252525'
+background = "#1e2022"
 foreground = "#eeedde"
 
 [colors.normal]
