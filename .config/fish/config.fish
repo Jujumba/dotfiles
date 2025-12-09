@@ -9,6 +9,8 @@ alias cd=z
 alias cl=clear
 alias objdump="objdump -M intel"
 alias vim="nvim"
+alias ls="eza -F -A" # Yep, I know
+
 
 # Git aliases
 alias g="git"
