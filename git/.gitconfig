@@ -13,6 +13,7 @@
     dlog = -c diff.external=difft log --ext-diff
     dshow = -c diff.external=difft show --ext-diff
     ddiff = -c diff.external=difft diff
+	st = status
 [core]
 	editor = nvim
 	fsmonitor = true
@@ -36,7 +37,5 @@
 	autocorrect = prompt
 [push]
 	autoSetupRemote = true
-[gpg]
-    format = ssh
 [difftool]
 	prompt = false
