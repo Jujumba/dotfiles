@@ -5,7 +5,7 @@ local _function = { ctermfg = 10 };
 local type = { ctermfg = 12 };
 local type_builtin = { ctermfg = 12, bold = true };
 local field = { ctermfg = 3 };
-local constant = { ctermfg = 14, bold = true };
+local constant = { ctermfg = 12, bold = true };
 local number = { ctermfg = 13 };
 local boolean = constant;
 local punctuation = { ctermfg = 8 };
@@ -26,7 +26,7 @@ vim.api.nvim_set_hl(0, "@type.builtin", type_builtin)
 vim.api.nvim_set_hl(0, "LineNr", { ctermfg = 8 })
 vim.api.nvim_set_hl(0, "CursorLineNr", { ctermfg = 3, bold = true })
 vim.api.nvim_set_hl(0, "MatchParen", { ctermfg = 12, ctermbg = 0, bold = true })
-vim.api.nvim_set_hl(0, "Visual", { nil, nil, reverse = true })
+vim.api.nvim_set_hl(0, "Visual", { ctermbg = 11, ctermfg = 15  })
 
 vim.api.nvim_set_hl(0, "@function", _function)
 vim.api.nvim_set_hl(0, "@function.builtin", _function)
@@ -36,7 +36,7 @@ vim.api.nvim_set_hl(0, "@variable", { link = "Normal" })
 vim.api.nvim_set_hl(0, "Statement", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "PreProc", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "Identifier", { link = "Normal" })
-vim.api.nvim_set_hl(0, "@boolean", constant)
+vim.api.nvim_set_hl(0, "@boolean", boolean)
 
 
 -- Punctuation and etc.
@@ -54,7 +54,7 @@ vim.api.nvim_set_hl(0, "@lsp.type.generic", { link = "Type" })
 vim.api.nvim_set_hl(0, "@lsp.typemod.property.declaration", { link = "Type" })
 vim.api.nvim_set_hl(0, "@lsp.type.namespace", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@constructor", _function)
-vim.api.nvim_set_hl(0, "@variable.builtin.cpp", { link = "@variable" })
+vim.api.nvim_set_hl(0, "@variable.builtin", { link = "@variable" })
 vim.api.nvim_set_hl(0, "@variable.builtin.asm", { ctermfg = 11 })
 vim.api.nvim_set_hl(0, "@function.builtin.asm", { ctermfg = 3, bold = true })
 vim.api.nvim_set_hl(0, "Field", { link = "Normal" })
@@ -74,7 +74,7 @@ vim.api.nvim_set_hl(0, "@markup.raw.block", { link = "Normal" }) -- md code bloc
 -- TODO: NOTE: WARN: ERROR:
 -- ERROR: 
 -- NOTE:
-vim.api.nvim_set_hl(0, "Comment", { ctermfg = 7 })
+vim.api.nvim_set_hl(0, "@comment", { ctermfg = 7 })
 vim.api.nvim_set_hl(0, "SpecialComment", { ctermfg = 14, ctermbg = 0, bold = true })
 vim.api.nvim_set_hl(0, "ErrorComment", { ctermfg = 9, ctermbg = 0, bold = true })
 vim.api.nvim_set_hl(0, "@comment.todo.comment", { link = "SpecialComment" })
