@@ -12,6 +12,7 @@ local punctuation = { ctermfg = 8 };
 local string = {ctermfg = 11 };
 local string_escape = { ctermfg = 12 };
 local dead_code = { ctermfg = 8 }
+local variable_builtin = { ctermfg = 12, bold = true }
 
 -- General
 vim.api.nvim_set_hl(0, "@number", number)
@@ -37,6 +38,7 @@ vim.api.nvim_set_hl(0, "Statement", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "PreProc", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "Identifier", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@boolean", boolean)
+vim.api.nvim_set_hl(0, "@character.special", { link = "Normal" })
 
 
 -- Punctuation and etc.
@@ -54,7 +56,7 @@ vim.api.nvim_set_hl(0, "@lsp.type.generic", { link = "Type" })
 vim.api.nvim_set_hl(0, "@lsp.typemod.property.declaration", { link = "Type" })
 vim.api.nvim_set_hl(0, "@lsp.type.namespace", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@constructor", _function)
-vim.api.nvim_set_hl(0, "@variable.builtin", { link = "@variable" })
+vim.api.nvim_set_hl(0, "@variable.builtin", variable_builtin)
 vim.api.nvim_set_hl(0, "@variable.builtin.asm", { ctermfg = 11 })
 vim.api.nvim_set_hl(0, "@function.builtin.asm", { ctermfg = 3, bold = true })
 vim.api.nvim_set_hl(0, "Field", { link = "Normal" })
@@ -87,7 +89,13 @@ vim.api.nvim_set_hl(0, "DiffAdd", { ctermfg = 10, bold = true })
 vim.api.nvim_set_hl(0, "DiffTextAdd", { ctermfg = 14, bold = true })
 vim.api.nvim_set_hl(0, "DiffText", { ctermfg = 14, bold = true })
 vim.api.nvim_set_hl(0, "DiffDelete", { ctermfg = 9, bold = true })
+vim.api.nvim_set_hl(0, "Changed", { ctermfg = 3, underline = true })
 
+local git_hg_groups = {"NeoTreeGitAdded", "NeoTreeGitConflict", "NeoTreeGitDeleted", "NeoTreeGitIgnored", "NeoTreeGitModified", "NeoTreeGitUntracked"};
+
+for k, git_hg_group in ipairs(git_hg_groups) do
+    -- vim.api.nvim_set_hl(0, git_hg_group, { bold = true })
+end
 
 -- Status Line
 vim.cmd("highlight StatusLine ctermfg=3 ctermbg=0 cterm=bold")
