@@ -1,6 +1,6 @@
 [font]
 normal = { family = "Iosevka", style = "Regular" }
-size = 18
+size = 15
 
 [window]
 padding = { x = 4, y = 4 }
@@ -19,7 +19,7 @@ green   = "#8cad5b"
 yellow  = "#f4d381"
 blue    = "#739cd9"
 magenta = "#d98ac8"
-cyan    = "#6CBBBF"
+cyan    = "#67c1c6"
 white   = "#d0d0bc"
 
 [colors.bright]
@@ -29,6 +29,6 @@ green   = "#b8d888"
 yellow  = "#E6B18E"
 blue    = "#99c9ee"
 magenta = "#e4abfc"
-cyan    = "#91E0E4"
+cyan    = "#7cd8e2"
 white   = "#d9fff4"
 
