@@ -1,4 +1,4 @@
-vim.keymap.set('n', '<leader>e', '<cmd>Neotree toggle<cr>')
+vim.keymap.set('n', '<leader>e', '<cmd>Neotree toggle float<cr>')
 
 -- Splits and navigating
 local smart_splits = require("smart-splits")

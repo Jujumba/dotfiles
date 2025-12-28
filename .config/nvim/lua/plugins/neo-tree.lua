@@ -1,3 +1,5 @@
+local common = require('neo-tree.sources.common.components')
+
 require("neo-tree").setup({
 
     source_selector = {
@@ -7,15 +9,25 @@ require("neo-tree").setup({
     filesystem = {
 
         components = {
-            icon = function(config, node, state)
-                if node.type == 'file' then
-                    return {
-                        text = "* ",
-                        highlight = config.highlight,
-                    }
-                end
-                return require('neo-tree.sources.common.components').icon(config, node, state)
-            end,
+            -- icon = function(config, node, state)
+            --     if node.type == 'file' then
+            --         return {
+            --             text = "*",
+            --             highlight = config.highlight,
+            --         }
+            --     end
+            --     return common.icon(config, node, state)
+            -- end,
+            -- name = function(config, node, state)
+            --     local result = common.name({right_padding = 0}, node, state)
+            --     return result
+            -- end,
+            -- trailing_slash = function()
+            --     return {
+            --         text = "/",
+            --         highlight = "Normal"
+            --     }
+            -- end,
         },
 
         filtered_items = {
@@ -34,7 +46,9 @@ require("neo-tree").setup({
         renderers = {
 
           directory = {
-            {"name", use_git_status_colors = false, trailing_slash = true, right_padding = 0},
+            {"icon"},
+            {"name", trailing_slash = true},
+            -- {"trailing_slash"},
             {"diagnostics"},
             {"git_status"},
           },
@@ -45,7 +59,7 @@ require("neo-tree").setup({
 
     default_component_configs = {
 
-      name = { use_git_status_colors = true },
+      name = { use_git_status_colors = false },
 
       git_status = {
 
@@ -59,7 +73,7 @@ require("neo-tree").setup({
           untracked = "",
           ignored   = "",
           unstaged  = "",
-          staged    = "%",
+          staged    = "",
           conflict  = "!",
         }, -- symbols
 
@@ -68,3 +82,4 @@ require("neo-tree").setup({
     }, -- default_component_configs 
 
 })
+
