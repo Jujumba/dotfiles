@@ -1,15 +1,16 @@
 vim.highlight.priorities.treesitter = 100
 
-local keyword = { ctermfg = 1, bold = true };
-local _function = { ctermfg = 10 };
-local type = { ctermfg = 12 };
-local type_builtin = { ctermfg = 12, bold = true };
-local field = { ctermfg = 3 };
+local keyword = { ctermfg = 5, bold = true };
+local operator = { ctermfg = 4, bold = true };
+local _function = { ctermfg = 12 };
+local type = { ctermfg = 11 };
+local type_builtin = { ctermfg = 11, bold = true };
+local field = { link = "Normal" };
 local constant = { ctermfg = 12, bold = true };
 local number = { ctermfg = 13 };
 local boolean = constant;
 local punctuation = { ctermfg = 8 };
-local string = {ctermfg = 11 };
+local string = { ctermfg = 10 };
 local string_escape = { ctermfg = 12 };
 local dead_code = { ctermfg = 8 }
 local variable_builtin = { ctermfg = 12, bold = true }
@@ -28,6 +29,9 @@ vim.api.nvim_set_hl(0, "LineNr", { ctermfg = 8 })
 vim.api.nvim_set_hl(0, "CursorLineNr", { ctermfg = 3, bold = true })
 vim.api.nvim_set_hl(0, "MatchParen", { ctermfg = 12, ctermbg = 0, bold = true })
 vim.api.nvim_set_hl(0, "Visual", { ctermbg = 11, ctermfg = 15  })
+-- vim.api.nvim_set_hl(0, "IncSearch", { ctermbg = 8, bold = true })
+-- vim.api.nvim_set_hl(0, "Search", { ctermbg = 8 })
+-- vim.api.nvim_set_hl(0, "CurSearch", { ctermbg = 8 })
 
 vim.api.nvim_set_hl(0, "@function", _function)
 vim.api.nvim_set_hl(0, "@function.builtin", _function)
@@ -46,7 +50,7 @@ vim.api.nvim_set_hl(0, "@module", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@punctuation.bracket", { link = "Punctuation" })
 vim.api.nvim_set_hl(0, "@punctuation.delimiter", { link = "Punctuation" })
 vim.api.nvim_set_hl(0, "@constructor.lua", { link = "Punctuation" })
-vim.api.nvim_set_hl(0, "@operator", keyword)
+vim.api.nvim_set_hl(0, "@operator", operator)
 
 -- Language related
 vim.api.nvim_set_hl(0, "@lsp.type.typeAlias", { link = "Normal" })
