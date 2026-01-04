@@ -35,9 +35,7 @@ vim.keymap.set('n', 'gd', vim.lsp.buf.declaration, {})
 vim.keymap.set('n', '<leader>bb', telescope_builtin.buffers, { desc = 'Search opened buffers' })
 vim.keymap.set('n', '<leader>bc', '<cmd>bd<cr>', { desc = 'Close current buffer' })
 vim.keymap.set('n', '<leader>c', '<cmd>bd<cr>', { desc = 'Close current buffer' })
-
 vim.keymap.set('n', '<leader><leader>', '<C-6>', { desc = 'Open previous buffer' })
-
 vim.keymap.set('n', 'E', function() vim.diagnostic.open_float({ border = "rounded" }) end, { desc = 'Hover LSP error' })
 
 -- Comment.nvim
@@ -53,3 +51,4 @@ end)
 
 -- General
 vim.keymap.set('n', 'Q', '<cmd>:q<cr>', { desc = 'Exit NeoVim' })
+vim.keymap.set('n', 'H', '<cmd>:noh<cr>', { desc = 'Remove search' })

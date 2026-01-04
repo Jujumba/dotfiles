@@ -23,15 +23,16 @@ local on_attach = function(client, bufnr)
     end
 end
 
-vim.lsp.enable({ "clangd", "zls", "rust_analyzer" })
 local lsps = {
     rust_analyzer = { single_file_support = true },
     clangd = { },
     zls = { },
+    luals = { }
 }
 
 for lsp, opts in pairs(lsps) do
     opts["on_attach"] = on_attach
+    vim.lsp.enable(tostring(lsp))
     vim.lsp.config(tostring(lsp), opts)
 end
 
@@ -55,7 +56,18 @@ cmp.setup({
     window = {
         completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
-    }
+    },
+
+    experimental = {
+        ghost_text = {
+            hl_group = "@comment",
+            formatter = function(text)
+                -- Only show the first line
+                return text:match("^[^\n]*") or text
+            end,
+        },
+    },
+
 })
 
 -- Print LSP errors on the erroneous line
