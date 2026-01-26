@@ -1,17 +1,18 @@
 vim.highlight.priorities.treesitter = 100
 
-local keyword = { ctermfg = 1, bold = true };
-local _function = { ctermfg = 10 };
-local type = { ctermfg = 12 };
-local type_builtin = { ctermfg = 12, bold = true };
+local keyword = { ctermfg = 13 };
+local _function = { ctermfg = 12 };
+local type = { ctermfg = 3 };
+local type_builtin = { ctermfg = 3, bold = true };
 local field = { ctermfg = 3 };
 local constant = { ctermfg = 12, bold = true };
-local number = { ctermfg = 13 };
+local number = { ctermfg = 11 };
 local boolean = constant;
 local punctuation = { ctermfg = 8 };
-local string = {ctermfg = 11 };
+local string = {ctermfg = 10 };
 local string_escape = { ctermfg = 12 };
 local dead_code = { ctermfg = 8 }
+local variable = { }
 local variable_builtin = { ctermfg = 12, bold = true }
 
 -- General
@@ -33,7 +34,7 @@ vim.api.nvim_set_hl(0, "@function", _function)
 vim.api.nvim_set_hl(0, "@function.builtin", _function)
 
 vim.api.nvim_set_hl(0, "@character", string)
-vim.api.nvim_set_hl(0, "@variable", { link = "Normal" })
+vim.api.nvim_set_hl(0, "@variable", variable)
 vim.api.nvim_set_hl(0, "Statement", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "PreProc", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "Identifier", { link = "Normal" })
@@ -66,7 +67,7 @@ vim.api.nvim_set_hl(0, "@lsp.type.enumMember", { ctermfg = 13 })
 vim.api.nvim_set_hl(0, "@constant.builtin", constant)
 vim.api.nvim_set_hl(0, "@property.toml", { link = Normal })
 
-vim.api.nvim_set_hl(0, "@variable.member", field)
+-- vim.api.nvim_set_hl(0, "@variable.member", field)
 vim.api.nvim_set_hl(0, "@property", field)
 
 vim.api.nvim_set_hl(0, "@keyword.import.zig", { link = "@function.builtin" }) -- mnemonics
@@ -109,6 +110,8 @@ vim.api.nvim_set_hl(0, 'NeoTreeDirectoryName', { ctermfg = 4, bold = true })
 vim.api.nvim_set_hl(0, 'NeoTreeDirectoryIcon', { ctermfg = 4, bold = true })
 vim.api.nvim_set_hl(0, "TelescopeSelection", { ctermbg = 0, bold = true })
 vim.api.nvim_set_hl(0, "TelescopeMatching", { ctermfg = 6 })
+-- vim.cmd("highlight MiniCursorwordCurrent ")
+vim.api.nvim_set_hl(0, "MiniCursorwordCurrent", { underline = false })
 
 -- Highlight yanked area
 vim.api.nvim_create_autocmd('TextYankPost', {

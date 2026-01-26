@@ -13,6 +13,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
         os.exit(1)
     end
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
@@ -51,6 +52,9 @@ require("lazy").setup({
 
         -- Tree-sitter
         { 'nvim-treesitter/nvim-treesitter' },
+
+        -- Underscore cursor word
+        { 'nvim-mini/mini.cursorword', version = '*' },
 
         -- Telescope
         {
@@ -100,6 +104,7 @@ require("plugins.mason")
 require("plugins.autoclose")
 require("plugins.comment")
 require("plugins.treesitter")
+require('plugins.cursorword')
 require("highlight")
 require("statusline")
 
@@ -121,3 +126,4 @@ vim.cmd("set notermguicolors")
 vim.opt.cursorline = true -- Enable `CursorLineNr` highlight group
 vim.o.scrolloff = 6
 vim.opt.fillchars:append({ diff = " " }) -- vimdiff fill char
+

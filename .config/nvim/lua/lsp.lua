@@ -27,7 +27,8 @@ local lsps = {
     rust_analyzer = { single_file_support = true },
     clangd = { },
     zls = { },
-    luals = { }
+    luals = { },
+    pyright = {},
 }
 
 for lsp, opts in pairs(lsps) do
@@ -56,16 +57,6 @@ cmp.setup({
     window = {
         completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
-    },
-
-    experimental = {
-        ghost_text = {
-            hl_group = "@comment",
-            formatter = function(text)
-                -- Only show the first line
-                return text:match("^[^\n]*") or text
-            end,
-        },
     },
 
 })
