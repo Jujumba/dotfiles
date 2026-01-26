@@ -1,6 +1,6 @@
 [font]
 normal = { family = "Iosevka", style = "Regular" }
-size = 15
+size = 18
 
 [window]
 padding = { x = 4, y = 4 }
@@ -9,26 +9,25 @@ padding = { x = 4, y = 4 }
 save_to_clipboard = true
 
 [colors.primary]
-background = "#1e2022"
+background = "#1c1c1e"
 foreground = "#eeedde"
 
 [colors.normal]
-black   = "#303030"
-red     = "#d17067"
-green   = "#8cad5b"
-yellow  = "#f4d381"
-blue    = "#739cd9"
-magenta = "#d98ac8"
-cyan    = "#67c1c6"
-white   = "#d0d0bc"
+black   = "#242424" # 0
+red     = "#d17067" # 1
+green   = "#90a959" # 2
+yellow  = "#e7b67d" # 3
+blue    = "#739cd9" # 4
+magenta = "#aa759f" # 5
+cyan    = "#75b5aa" # 6
+white   = "#d8d8d8" # 7
 
 [colors.bright]
-black   = "#a2a2a2"
-red     = "#ff9e9b"
-green   = "#b8d888"
-yellow  = "#E6B18E"
-blue    = "#99c9ee"
-magenta = "#e4abfc"
-cyan    = "#7cd8e2"
-white   = "#d9fff4"
-
+black   = "#959595" # 8
+red     = "#ff9e9b" # 9
+green   = "#aac474" # 10
+yellow  = "#feca88" # 11
+blue    = "#99c9ee" # 12
+magenta = "#c28cb8" # 13
+cyan    = "#93d3c3" # 14
+white   = "#f8f8f8" # 15
