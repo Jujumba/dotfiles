@@ -4,4 +4,5 @@ PointerAlignment: Right
 AllowShortIfStatementsOnASingleLine: Always
 AllowShortBlocksOnASingleLine: Never
 AlignConsecutiveMacros: true
-AlignConsecutiveDeclarations: true
+# AlignConsecutiveDeclarations: true
+AllowShortFunctionsOnASingleLine: None
