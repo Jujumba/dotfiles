@@ -59,6 +59,12 @@ require("lazy").setup({
         -- Surround words
         { 'nvim-mini/mini.surround', version = false },
 
+        -- Completion for LSP
+        { 'nvim-mini/mini.completion', version = false },
+
+        -- Status line
+        { 'nvim-mini/mini.statusline', version = false },
+
         -- Telescope
         {
             'nvim-telescope/telescope.nvim',
@@ -71,10 +77,8 @@ require("lazy").setup({
             "williamboman/mason.nvim",
             lazy = false
         },
-        -- LSP
-        { "neovim/nvim-lspconfig" }, -- WARN: even though it's not used, lsp won't work without it
-        { 'hrsh7th/nvim-cmp' },
-        { 'hrsh7th/cmp-nvim-lsp' },
+
+        -- Bracket autoclose
         { 'm4xshen/autoclose.nvim' },
 
         -- Comment
@@ -83,17 +87,6 @@ require("lazy").setup({
         -- Multiline cursor
         { 'mg979/vim-visual-multi' },
 
-        -- Function signature help
-        {
-            "ray-x/lsp_signature.nvim",
-            event = "InsertEnter",
-            opts = {
-                handler_opts = {
-                    border = "rounded"
-                },
-                hint_prefix = ""
-            },
-        },
     },
 
     checker = { enabled = false },
@@ -112,7 +105,6 @@ require('plugins.surround')
 require("highlight")
 require("statusline")
 
-
 -- QOL
 
 -- Indentations
@@ -130,5 +122,6 @@ vim.cmd("set t_Co=16") -- Use terminal color for background
 vim.cmd("set notermguicolors")
 vim.opt.cursorline = true -- Enable `CursorLineNr` highlight group
 vim.o.scrolloff = 6
+vim.o.showmode = false
 vim.opt.fillchars:append({ diff = " " }) -- vimdiff fill char
 

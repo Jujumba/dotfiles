@@ -1,22 +1,43 @@
-function fmt_lsp_diagnostics(severity, severity_text)
-    local bufnr = vim.api.nvim_get_current_buf()
-    local diagnostics = vim.diagnostic.get(bufnr, { severity = severity })
-    local count = #diagnostics
-    if count <= 0 then
-        return ""
-    elseif count == 1 then
-        return "1 " .. severity_text .. " "
-    else
-        return count .. " " .. severity_text .. "s "
-    end
-end
+vim.api.nvim_set_hl(0, "MiniStatuslineModeNormal", { ctermbg = 4, ctermfg = 0 })
+vim.api.nvim_set_hl(0, "MiniStatuslineModeInsert", { ctermbg = 2, ctermfg = 0 })
+vim.api.nvim_set_hl(0, "MiniStatuslineModeCommand", { ctermbg = 6, ctermfg = 0 })
+vim.api.nvim_set_hl(0, "MiniStatuslineModeVisual", { ctermbg = 1, ctermfg = 0 })
 
-function fmt_lsp_errors()
-    return fmt_lsp_diagnostics(vim.diagnostic.severity.ERROR, 'error')
-end
+vim.api.nvim_set_hl(0, "MiniStatuslineFilename", { ctermfg = 3 })
 
-function fmt_lsp_warnings()
-    return fmt_lsp_diagnostics(vim.diagnostic.severity.WARNING, 'warning')
-end
 
-vim.opt.statusline = "%t %l:%c %{v:lua.fmt_lsp_errors()}%{v:lua.fmt_lsp_warnings()}%m"
+require('mini.statusline').setup({
+  use_icons = false,
+
+  content = {
+    active = function()
+      local mode, mode_hl = MiniStatusline.section_mode({ trunc_width = nil })
+      local filename    = MiniStatusline.section_filename({ trunc_width = 140 })
+      local lsp         = MiniStatusline.section_lsp({ trunc_width = 50 })
+      local location    = MiniStatusline.section_location({ trunc_width = 999 })
+
+      return MiniStatusline.combine_groups({
+        { hl = mode_hl, strings = { mode } },
+        '%<',
+        { hl = 'MiniStatuslineFilename', strings = { filename } },
+        { hl = 'MiniStatuslineInactive', strings = { lsp } },
+        { hl = 'MiniStatuslineFileinfo', strings = { '%l:%2v' } },
+      })
+    end,
+
+    inactive = function()
+      local mode, mode_hl = MiniStatusline.section_mode({ trunc_width = nil })
+      local filename    = MiniStatusline.section_filename({ trunc_width = 140 })
+      local lsp         = MiniStatusline.section_lsp({ trunc_width = 50 })
+      local location    = MiniStatusline.section_location({ trunc_width = 999 })
+
+      return MiniStatusline.combine_groups({
+        { hl = 'MiniStatuslineInactive', strings = { mode } },
+        '%<',
+        { hl = 'MiniStatuslineInactive', strings = { filename } },
+        { hl = 'MiniStatuslineInactive', strings = { lsp } },
+        { hl = 'MiniStatuslineInactive', strings = { '%l:%2v' } },
+      })
+    end,
+  },
+})

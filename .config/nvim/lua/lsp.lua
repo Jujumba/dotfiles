@@ -8,12 +8,6 @@ capabilities.textDocument.completion.completionItem.snippetSupport = false
 
 local on_attach = function(client, bufnr)
     -- Add format on save
-        require "lsp_signature".on_attach({
-            bind = true,
-            handler_opts = {
-                border = "rounded"
-            }
-        }, bufnr)
     if client.server_capabilities.documentFormattingProvider then
         vim.api.nvim_create_autocmd("BufWritePre", {
             buffer = bufnr,
@@ -38,29 +32,7 @@ for lsp, opts in pairs(lsps) do
     vim.lsp.config(tostring(lsp), opts)
 end
 
-local cmp = require('cmp')
-
--- LSP suggestion shortcuts
-cmp.setup({
-    snippet = {
-        expand = function(args)
-            vim.snippet.expand(args.body)
-        end
-    },
-    mapping = cmp.mapping.preset.insert({
-        ['<Tab>'] = cmp.mapping.select_next_item(),
-        ['<CR>'] = cmp.mapping.confirm({ select = true }),
-    }),
-    sources = cmp.config.sources(
-        { { name = 'nvim_lsp' }, },
-        { { name = 'buffer' } }
-    ),
-    window = {
-        completion = cmp.config.window.bordered(),
-        documentation = cmp.config.window.bordered(),
-    },
-
-})
+require('mini.completion').setup()
 
 -- Print LSP errors on the erroneous line
 vim.diagnostic.config({

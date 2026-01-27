@@ -103,9 +103,9 @@ vim.cmd("highlight StatusLine ctermfg=3 ctermbg=0 cterm=bold")
 vim.cmd("highlight StatusLineNC ctermfg=7 ctermbg=0 cterm=NONE")
 
 -- Misc
--- vim.api.nvim_set_hl(0, 'Pmenu', { ctermbg = 8 })
--- vim.api.nvim_set_hl(0, 'PmenuSel', { ctermbg = 0 })
--- vim.api.nvim_set_hl(0, 'PmenuMatch', { ctermfg = 12, bold = true })
+vim.api.nvim_set_hl(0, 'Pmenu', { ctermbg = 8 })
+vim.api.nvim_set_hl(0, 'PmenuSel', { ctermbg = 0 })
+vim.api.nvim_set_hl(0, 'PmenuMatch', { ctermfg = 12, bold = true })
 
 -- Plugin specific
 vim.api.nvim_set_hl(0, 'NeoTreeCursorLine', { ctermbg = 0 })
