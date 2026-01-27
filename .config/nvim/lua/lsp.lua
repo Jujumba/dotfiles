@@ -2,17 +2,18 @@ vim.keymap.set("n", '<leader>r', vim.lsp.buf.rename)
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
 vim.keymap.set('n', 'K', function() vim.lsp.buf.hover({ border = "rounded" }) end, {})
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+-- disable snippets snippets
+capabilities.textDocument.completion.completionItem.snippetSupport = false
+
 local on_attach = function(client, bufnr)
-    require "lsp_signature".on_attach(
-        {
+    -- Add format on save
+        require "lsp_signature".on_attach({
             bind = true,
             handler_opts = {
                 border = "rounded"
             }
-        },
-        bufnr
-    )
-    -- Add format on save
+        }, bufnr)
     if client.server_capabilities.documentFormattingProvider then
         vim.api.nvim_create_autocmd("BufWritePre", {
             buffer = bufnr,
@@ -25,7 +26,7 @@ end
 
 local lsps = {
     rust_analyzer = { single_file_support = true },
-    clangd = { },
+    clangd = { capabilities = capabilities },
     zls = { },
     luals = { },
     pyright = {},

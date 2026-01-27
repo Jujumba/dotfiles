@@ -8,7 +8,7 @@ local field = { ctermfg = 3 };
 local constant = { ctermfg = 12, bold = true };
 local number = { ctermfg = 11 };
 local boolean = constant;
-local punctuation = { ctermfg = 8 };
+local punctuation = { ctermfg = 7 };
 local string = {ctermfg = 10 };
 local string_escape = { ctermfg = 12 };
 local dead_code = { ctermfg = 8 }
@@ -103,6 +103,9 @@ vim.cmd("highlight StatusLine ctermfg=3 ctermbg=0 cterm=bold")
 vim.cmd("highlight StatusLineNC ctermfg=7 ctermbg=0 cterm=NONE")
 
 -- Misc
+-- vim.api.nvim_set_hl(0, 'Pmenu', { ctermbg = 8 })
+-- vim.api.nvim_set_hl(0, 'PmenuSel', { ctermbg = 0 })
+-- vim.api.nvim_set_hl(0, 'PmenuMatch', { ctermfg = 12, bold = true })
 
 -- Plugin specific
 vim.api.nvim_set_hl(0, 'NeoTreeCursorLine', { ctermbg = 0 })
@@ -110,7 +113,6 @@ vim.api.nvim_set_hl(0, 'NeoTreeDirectoryName', { ctermfg = 4, bold = true })
 vim.api.nvim_set_hl(0, 'NeoTreeDirectoryIcon', { ctermfg = 4, bold = true })
 vim.api.nvim_set_hl(0, "TelescopeSelection", { ctermbg = 0, bold = true })
 vim.api.nvim_set_hl(0, "TelescopeMatching", { ctermfg = 6 })
--- vim.cmd("highlight MiniCursorwordCurrent ")
 vim.api.nvim_set_hl(0, "MiniCursorwordCurrent", { underline = false })
 
 -- Highlight yanked area

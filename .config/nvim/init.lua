@@ -54,7 +54,10 @@ require("lazy").setup({
         { 'nvim-treesitter/nvim-treesitter' },
 
         -- Underscore cursor word
-        { 'nvim-mini/mini.cursorword', version = '*' },
+        { 'nvim-mini/mini.cursorword', version = false },
+
+        -- Surround words
+        { 'nvim-mini/mini.surround', version = false },
 
         -- Telescope
         {
@@ -105,8 +108,10 @@ require("plugins.autoclose")
 require("plugins.comment")
 require("plugins.treesitter")
 require('plugins.cursorword')
+require('plugins.surround')
 require("highlight")
 require("statusline")
+
 
 -- QOL
 

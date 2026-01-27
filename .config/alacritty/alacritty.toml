@@ -20,10 +20,10 @@ yellow  = "#e7b67d" # 3
 blue    = "#739cd9" # 4
 magenta = "#aa759f" # 5
 cyan    = "#75b5aa" # 6
-white   = "#d8d8d8" # 7
+white   = "#9d9d9d" # 7
 
 [colors.bright]
-black   = "#959595" # 8
+black   = "#6c6c6c" # 8
 red     = "#ff9e9b" # 9
 green   = "#aac474" # 10
 yellow  = "#feca88" # 11
