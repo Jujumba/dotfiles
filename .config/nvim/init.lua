@@ -65,6 +65,9 @@ require("lazy").setup({
         -- Status line
         { 'nvim-mini/mini.statusline', version = false },
 
+        -- LSP
+        { "neovim/nvim-lspconfig" }, -- WARN: even though it's not used, lsp won't work without it
+
         -- Telescope
         {
             'nvim-telescope/telescope.nvim',

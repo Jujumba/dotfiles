@@ -11,9 +11,10 @@ local boolean = constant;
 local punctuation = { ctermfg = 7 };
 local string = {ctermfg = 10 };
 local string_escape = { ctermfg = 12 };
-local dead_code = { ctermfg = 8 }
-local variable = { }
-local variable_builtin = { ctermfg = 12, bold = true }
+local dead_code = { ctermfg = 8 };
+local variable = { };
+local variable_builtin = { ctermfg = 12, bold = true };
+local enum_member = { ctermfg = 14 };
 
 -- General
 vim.api.nvim_set_hl(0, "@number", number)
@@ -63,7 +64,7 @@ vim.api.nvim_set_hl(0, "@function.builtin.asm", { ctermfg = 3, bold = true })
 vim.api.nvim_set_hl(0, "Field", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@variable.member", { link = "Field" })
 vim.api.nvim_set_hl(0, "@lsp.typemod.property.declaration", { link = "Field" })
-vim.api.nvim_set_hl(0, "@lsp.type.enumMember", { ctermfg = 13 })
+vim.api.nvim_set_hl(0, "@lsp.type.enumMember", enum_member)
 vim.api.nvim_set_hl(0, "@constant.builtin", constant)
 vim.api.nvim_set_hl(0, "@property.toml", { link = Normal })
 
