@@ -42,7 +42,7 @@ bind \ef "append_fzf_search"    # Alt   + f   -> find file and append to prompt
 
 function nvim_fzf_edit
     set fzf_result $(fzf --border --color=dark --height 30% --layout reverse)
-    set fzf_status $status
+    set fzf_status $(string escape "$status")
     commandline --function repaint
     if test $fzf_status -ne 0
         return

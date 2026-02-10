@@ -115,6 +115,7 @@ vim.api.nvim_set_hl(0, 'NeoTreeDirectoryIcon', { ctermfg = 4, bold = true })
 vim.api.nvim_set_hl(0, "TelescopeSelection", { ctermbg = 0, bold = true })
 vim.api.nvim_set_hl(0, "TelescopeMatching", { ctermfg = 6 })
 vim.api.nvim_set_hl(0, "MiniCursorwordCurrent", { underline = false })
+vim.api.nvim_set_hl(0, "MiniCursorword", { ctermbg = 0 })
 
 -- Highlight yanked area
 vim.api.nvim_create_autocmd('TextYankPost', {
