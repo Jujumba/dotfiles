@@ -1,6 +1,6 @@
 [font]
 normal = { family = "Iosevka", style = "Regular" }
-size = 18
+size = 16
 
 [window]
 padding = { x = 4, y = 4 }
@@ -9,8 +9,8 @@ padding = { x = 4, y = 4 }
 save_to_clipboard = true
 
 [colors.primary]
-background = "#1c1c1e"
-foreground = "#eeedde"
+background = "#1d1f21"
+foreground = "#dbe9ef"
 
 [colors.normal]
 black   = "#2b2b2b" # 0
@@ -25,7 +25,7 @@ white   = "#9d9d9d" # 7
 [colors.bright]
 black   = "#717171" # 8
 red     = "#ff9e9b" # 9
-green   = "#aac474" # 10
+green   = "#a0d45c" # 10
 yellow  = "#feca88" # 11
 blue    = "#99c9ee" # 12
 magenta = "#c28cb8" # 13
