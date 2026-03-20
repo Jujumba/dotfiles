@@ -2,10 +2,8 @@
     path = .user-gitconfig
 [alias]
 	a = add
-    al = add --all
 	c = commit -S
 	acn = commit -S --amend --no-message
-	s = status
 	ol = log --oneline
 	olg = log --oneline --graph
 	ch = checkout
@@ -14,6 +12,7 @@
     dshow = -c diff.external=difft show --ext-diff
     ddiff = -c diff.external=difft diff
 	st = status
+    unstage = restore --staged
 [core]
 	editor = nvim
 	fsmonitor = true
