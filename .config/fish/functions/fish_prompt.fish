@@ -4,11 +4,12 @@
 
 function fish_prompt
     set -l last_status $status
+    set dollar "> "
     if test $last_status -ne 0
-        set dollar (string join '' (set_color --bold red) "[$last_status]" (set_color normal) "> ") 
+        set error (string join '' (set_color brred) "[" (set_color --bold brred) $last_status (set_color normal) (set_color brred) "]") 
     else
-        set dollar "> "
+        set error ''
     end
 
-    string join '' (set_color --bold brgreen) (prompt_pwd) (set_color normal) (fish_git_prompt) $dollar
+    string join '' (set_color --bold brgreen) (prompt_pwd) (set_color normal) (fish_git_prompt) $error $dollar
 end
