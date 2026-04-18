@@ -2,8 +2,8 @@ vim.highlight.priorities.treesitter = 100
 
 local keyword = { ctermfg = 1 };
 local _function = { ctermfg = 12 };
-local type = { ctermfg = 11 };
-local type_builtin = { ctermfg = 11, bold = true };
+local type = { ctermfg = 3 };
+local type_builtin = { ctermfg = 3 };
 local field = { };
 local constant = { ctermfg = 12, bold = true };
 local number = { ctermfg = 11 };
@@ -60,7 +60,7 @@ vim.api.nvim_set_hl(0, "@lsp.type.namespace", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@constructor", _function)
 vim.api.nvim_set_hl(0, "@variable.builtin", variable_builtin)
 vim.api.nvim_set_hl(0, "@variable.builtin.asm", { ctermfg = 11 })
-vim.api.nvim_set_hl(0, "@function.builtin.asm", { ctermfg = 3, bold = true })
+vim.api.nvim_set_hl(0, "@function.builtin.asm", { ctermfg = 14, bold = true })
 vim.api.nvim_set_hl(0, "Field", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@variable.member", { link = "Field" })
 vim.api.nvim_set_hl(0, "@lsp.typemod.property.declaration", { link = "Field" })

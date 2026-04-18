@@ -1,7 +1,7 @@
-vim.api.nvim_set_hl(0, "MiniStatuslineModeNormal", { ctermbg = 4, ctermfg = 0 })
-vim.api.nvim_set_hl(0, "MiniStatuslineModeInsert", { ctermbg = 2, ctermfg = 0 })
-vim.api.nvim_set_hl(0, "MiniStatuslineModeCommand", { ctermbg = 6, ctermfg = 0 })
-vim.api.nvim_set_hl(0, "MiniStatuslineModeVisual", { ctermbg = 1, ctermfg = 0 })
+vim.api.nvim_set_hl(0, "MiniStatuslineModeNormal", { ctermbg = 12, ctermfg = 0 })
+vim.api.nvim_set_hl(0, "MiniStatuslineModeInsert", { ctermbg = 10, ctermfg = 0 })
+vim.api.nvim_set_hl(0, "MiniStatuslineModeCommand", { ctermbg = 14, ctermfg = 0 })
+vim.api.nvim_set_hl(0, "MiniStatuslineModeVisual", { ctermbg = 9, ctermfg = 0 })
 
 vim.api.nvim_set_hl(0, "MiniStatuslineFilename", { ctermfg = 3 })
 

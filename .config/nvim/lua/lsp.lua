@@ -8,14 +8,14 @@ capabilities.textDocument.completion.completionItem.snippetSupport = false
 
 local on_attach = function(client, bufnr)
     -- Add format on save
-    if client.server_capabilities.documentFormattingProvider then
-        vim.api.nvim_create_autocmd("BufWritePre", {
-            buffer = bufnr,
-            callback = function()
-                vim.lsp.buf.format({ bufnr = bufnr, filter = function(c) return c.id == client.id end })
-            end,
-        })
-    end
+    -- if client.server_capabilities.documentFormattingProvider then
+    --     vim.api.nvim_create_autocmd("BufWritePre", {
+    --         buffer = bufnr,
+    --         callback = function()
+    --             vim.lsp.buf.format({ bufnr = bufnr, filter = function(c) return c.id == client.id end })
+    --         end,
+    --     })
+    -- end
 end
 
 local lsps = {
