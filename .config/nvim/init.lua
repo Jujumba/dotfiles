@@ -51,7 +51,10 @@ require("lazy").setup({
         { 'mrjones2014/smart-splits.nvim' },
 
         -- Tree-sitter
-        { 'nvim-treesitter/nvim-treesitter' },
+        {
+            'nvim-treesitter/nvim-treesitter',
+            branch = "main",
+        },
 
         -- Underscore cursor word
         { 'nvim-mini/mini.cursorword', version = false },
