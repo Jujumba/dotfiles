@@ -1,22 +1,32 @@
 # Reference:
 #   <https://ghostty.org/docs/config/reference>
 
-# Themes
-# 2. ayu
-# 3. Desert
-# 4. Arthur
-# 5. 0x96f
-# 6. gruber-darker
-# 7. Monokai Pro Octagon
-# 8. tokyonight_moon
-# 9. Monokai Pro Spectrum
+# Theme
 theme = abomination
-font-size = 13.5
+
+# Font
+font-size = 15.5
 font-family = Iosevka
 font-family = Apple Color Emoji
 font-feature = -calt 
 font-feature = -liga
 font-feature = -dlig
+
+# Cursor
 cursor-style = block
+cursor-color = cell-foreground
+cursor-text = cell-background
+
+# Selection
+selection-foreground = cell-background
+selection-background = cell-foreground
+
+# Scrolling
+mouse-scroll-multiplier=discrete:0.4
+
+# Misc
 shell-integration-features = no-cursor
 confirm-close-surface = false
+quit-after-last-window-closed = false
+# basically keep ghostty alive for instantaneous startup
+quit-after-last-window-closed-delay = 24h
