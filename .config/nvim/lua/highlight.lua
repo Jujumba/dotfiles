@@ -16,6 +16,8 @@ local variable = { };
 local variable_builtin = { ctermfg = 12, bold = true };
 local enum_member = { };
 
+local math = { ctermfg = 3, italic = true }
+
 -- General
 vim.api.nvim_set_hl(0, "@number", number)
 vim.api.nvim_set_hl(0, "@number.float", number)
@@ -29,7 +31,7 @@ vim.api.nvim_set_hl(0, "@type.builtin", type_builtin)
 vim.api.nvim_set_hl(0, "LineNr", { ctermfg = 8 })
 vim.api.nvim_set_hl(0, "CursorLineNr", { ctermfg = 3, bold = true })
 vim.api.nvim_set_hl(0, "MatchParen", { ctermfg = 12, ctermbg = 0, bold = true })
-vim.api.nvim_set_hl(0, "Visual", { ctermbg = 11, ctermfg = 15  })
+vim.api.nvim_set_hl(0, "Visual", { ctermbg = 15, ctermfg = 0  })
 
 vim.api.nvim_set_hl(0, "@function", _function)
 vim.api.nvim_set_hl(0, "@function.builtin", _function)
@@ -85,6 +87,7 @@ vim.api.nvim_set_hl(0, "@comment.todo.comment", { link = "SpecialComment" })
 vim.api.nvim_set_hl(0, "@comment.note.comment", { link = "SpecialComment" })
 vim.api.nvim_set_hl(0, "@comment.error.comment", { link = "ErrorComment" })
 vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", dead_code)
+vim.api.nvim_set_hl(0, "@markup.math", math)
 
 -- Git
 vim.api.nvim_set_hl(0, "DiffAdd", { ctermfg = 10, bold = true })
