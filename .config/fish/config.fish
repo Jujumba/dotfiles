@@ -33,7 +33,7 @@ set fish_color_option --bold brcyan
 bind \e\t forward-char
 # TODO: unbind properly
 # bind --erase --mode default \cl
-bind \cl __null                 # Ctrl  + l   -> noop
+# bind \cl __null               # Ctrl  + l   -> noop
 bind \ek up-or-search           # Alt   + k   -> up
 bind \ej down-or-search         # Alt   + j   -> down
 bind \ec fish_clipboard_paste   # Alt   + c   -> paste
@@ -78,3 +78,4 @@ end
 function __null
 end
 
+export PATH="$HOME/.local/bin:$PATH"
