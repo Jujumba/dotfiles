@@ -51,10 +51,7 @@ require("lazy").setup({
         { 'mrjones2014/smart-splits.nvim' },
 
         -- Tree-sitter
-        {
-            'nvim-treesitter/nvim-treesitter',
-            branch = "main",
-        },
+        { "nvim-treesitter/nvim-treesitter", tag = "v0.10.0", lazy = false, build = ":TSUpdate" },
 
         -- Underscore cursor word
         { 'nvim-mini/mini.cursorword', version = false },
@@ -73,9 +70,12 @@ require("lazy").setup({
 
         -- Telescope
         {
-            'nvim-telescope/telescope.nvim',
-            tag = '0.1.8',
-            dependencies = { 'nvim-lua/plenary.nvim' }
+            'nvim-telescope/telescope.nvim', version = '*',
+            dependencies = {
+                'nvim-lua/plenary.nvim',
+                -- optional but recommended
+                { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+            }
         },
 
         -- Mason
@@ -93,6 +93,9 @@ require("lazy").setup({
         -- Multiline cursor
         { 'mg979/vim-visual-multi' },
 
+        -- Indentation scope
+        { 'nvim-mini/mini.indentscope', version = false },
+
     },
 
     checker = { enabled = false },
@@ -108,6 +111,7 @@ require("plugins.comment")
 require("plugins.treesitter")
 require('plugins.cursorword')
 require('plugins.surround')
+require('plugins.indentscope')
 require("highlight")
 require("statusline")
 
