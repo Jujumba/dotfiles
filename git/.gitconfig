@@ -12,7 +12,7 @@
     dshow = -c diff.external=difft show --ext-diff
     ddiff = -c diff.external=difft diff
 	st = status
-    unstage = restore --staged
+	unstage = restore --staged
 [core]
 	editor = nvim
 	fsmonitor = true
