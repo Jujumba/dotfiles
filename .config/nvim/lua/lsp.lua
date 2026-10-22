@@ -8,19 +8,19 @@ capabilities.textDocument.completion.completionItem.snippetSupport = false
 
 local on_attach = function(client, bufnr)
     -- Add format on save
-    if client.server_capabilities.documentFormattingProvider then
-        vim.api.nvim_create_autocmd("BufWritePre", {
-            buffer = bufnr,
-            callback = function()
-                vim.lsp.buf.format({ bufnr = bufnr, filter = function(c) return c.id == client.id end })
-            end,
-        })
-    end
+    -- if client.server_capabilities.documentFormattingProvider then
+    --     vim.api.nvim_create_autocmd("BufWritePre", {
+    --         buffer = bufnr,
+    --         callback = function()
+    --             vim.lsp.buf.format({ bufnr = bufnr, filter = function(c) return c.id == client.id end })
+    --         end,
+    --     })
+    -- end
 end
 
 local lsps = {
     rust_analyzer = { single_file_support = true },
-    clangd = { capabilities = capabilities },
+    clangd = { capabilities = capabilities, autostart = false },
     zls = { },
     luals = { },
     pyright = {},
@@ -29,7 +29,9 @@ local lsps = {
 
 for lsp, opts in pairs(lsps) do
     opts["on_attach"] = on_attach
-    vim.lsp.enable(tostring(lsp))
+    if tostring(lsp) ~= "clangd" then
+        vim.lsp.enable(lsp)
+    end
     vim.lsp.config(tostring(lsp), opts)
 end
 

@@ -1,7 +1,7 @@
 vim.highlight.priorities.treesitter = 100
 
 local keyword = { ctermfg = 1 };
-local _function = { ctermfg = 12 };
+local _function = { ctermfg = 6 };
 local type = { ctermfg = 3 };
 local type_builtin = { ctermfg = 3 };
 local field = { };
