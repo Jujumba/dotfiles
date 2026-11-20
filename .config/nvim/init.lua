@@ -96,6 +96,19 @@ require("lazy").setup({
         -- Indentation scope
         { 'nvim-mini/mini.indentscope', version = false },
 
+        -- CTag management
+        {
+          'ludovicchabant/vim-gutentags',
+          init = function()
+            -- keep tags out of your project tree (optional)
+            vim.g.gutentags_cache_dir = vim.fn.stdpath('cache') .. '/tags'
+
+            vim.g.gutentags_ctags_exclude = {
+              'node_modules', 'build', 'dist', '.git', '*.min.js',
+            }
+          end,
+        },
+
     },
 
     checker = { enabled = false },

@@ -30,7 +30,7 @@ vim.keymap.set('n', '<leader>gs', telescope_builtin.git_status, { desc = 'Search
 
 -- LSP
 vim.keymap.set("n", '<leader>r', vim.lsp.buf.rename)
-vim.keymap.set('n', 'gd', vim.lsp.buf.declaration, {})
+vim.keymap.set('n', 'gd', '<C-]>', { desc = 'Go to definition (LSP, then tags)' })
 
 -- Buffers & Bufferline
 vim.keymap.set('n', '<leader>bb', telescope_builtin.buffers, { desc = 'Search opened buffers' })
