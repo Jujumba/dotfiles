@@ -100,12 +100,14 @@ require("lazy").setup({
         {
           'ludovicchabant/vim-gutentags',
           init = function()
-            -- keep tags out of your project tree (optional)
+            -- keep tags out of your project tree
             vim.g.gutentags_cache_dir = vim.fn.stdpath('cache') .. '/tags'
 
             vim.g.gutentags_ctags_exclude = {
               'node_modules', 'build', 'dist', '.git', '*.min.js',
             }
+            -- exclude function prototypes
+            vim.g.gutentags_ctags_extra_args = { '--kinds-C=-p', '--kinds-C++=-p' }
           end,
         },
 
